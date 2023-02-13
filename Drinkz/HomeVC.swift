@@ -9,9 +9,15 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    var images: [UIImage] = []
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        images.append(UIImage(named: "drink1")!)
+        images.append(UIImage(named: "drink2")!)
+        images.append(UIImage(named: "drink3")!)
         
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -21,13 +27,13 @@ class HomeVC: UIViewController {
 
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        8
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularCoctailsCell", for: indexPath) as! PopularCoctailsCollectionViewCell
-        cell.image.image = UIImage(named: "preview")
-        cell.label.text = "Whiskey sour"
+        cell.image.image = images.randomElement()
+        cell.label.text = "Whiskey Sour"
         return cell
     }
 }
