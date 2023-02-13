@@ -6,6 +6,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,40 +26,117 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-TY-vqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="-399"/>
+            <point key="canvasLocation" x="1988.5496183206105" y="-399.29577464788736"/>
         </scene>
         <!--Home-->
         <scene sceneID="srv-W0-B0Y">
             <objects>
                 <viewController id="TPU-Ef-CnC" customClass="HomeVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pJa-eh-d6F">
+                    <view key="view" contentMode="scaleToFill" id="pJa-eh-d6F" customClass="UICollectionView">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopularHeader" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-Hx-rNc">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="dE5-7y-zji"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tAc-ms-epC">
+                                <rect key="frame" x="0.0" y="269" width="393" height="500"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HkV-wk-hcD">
+                                    <size key="itemSize" width="210" height="280"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="6qf-Hb-Gva" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="280"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2SH-FX-Yoh">
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="preview" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-iN-0hf">
+                                                    <rect key="frame" x="5" y="8" width="200" height="200"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cny-pd-Zk6">
+                                                    <rect key="frame" x="0.0" y="216" width="210" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="58" id="qvW-Jd-QvJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="k0f-iN-0hf" secondAttribute="trailing" constant="5" id="9bZ-dJ-nZ9"/>
+                                                <constraint firstItem="cny-pd-Zk6" firstAttribute="leading" secondItem="2SH-FX-Yoh" secondAttribute="leading" id="C7u-DB-hrO"/>
+                                                <constraint firstItem="cny-pd-Zk6" firstAttribute="top" secondItem="k0f-iN-0hf" secondAttribute="bottom" constant="8" symbolic="YES" id="DcS-4h-0YG"/>
+                                                <constraint firstAttribute="bottom" secondItem="cny-pd-Zk6" secondAttribute="bottom" constant="6" id="FrU-Wv-aRu"/>
+                                                <constraint firstAttribute="trailing" secondItem="cny-pd-Zk6" secondAttribute="trailing" id="PMG-sD-cRC"/>
+                                                <constraint firstItem="k0f-iN-0hf" firstAttribute="top" secondItem="2SH-FX-Yoh" secondAttribute="top" constant="8" id="VDa-se-clG"/>
+                                                <constraint firstItem="k0f-iN-0hf" firstAttribute="leading" secondItem="2SH-FX-Yoh" secondAttribute="leading" constant="5" id="rCi-eM-Oxt"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="210" height="280"/>
+                                        <connections>
+                                            <outlet property="image" destination="k0f-iN-0hf" id="iTN-er-D7C"/>
+                                            <outlet property="label" destination="cny-pd-Zk6" id="DXz-uY-Rxo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Coctails" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vy4-qK-XaN">
+                                <rect key="frame" x="16" y="218" width="361" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AFX-Hp-6d0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yQc-Hx-rNc" firstAttribute="leading" secondItem="AFX-Hp-6d0" secondAttribute="leading" id="CWs-Lq-fHY"/>
+                            <constraint firstItem="AFX-Hp-6d0" firstAttribute="trailing" secondItem="vy4-qK-XaN" secondAttribute="trailing" constant="16" id="IBm-pF-iaV"/>
+                            <constraint firstItem="tAc-ms-epC" firstAttribute="leading" secondItem="AFX-Hp-6d0" secondAttribute="leading" id="Njf-td-iXQ"/>
+                            <constraint firstItem="tAc-ms-epC" firstAttribute="top" secondItem="AFX-Hp-6d0" secondAttribute="top" constant="210" id="OfT-AD-1mm"/>
+                            <constraint firstItem="yQc-Hx-rNc" firstAttribute="trailing" secondItem="AFX-Hp-6d0" secondAttribute="trailing" id="RXg-Za-O3u"/>
+                            <constraint firstItem="vy4-qK-XaN" firstAttribute="top" secondItem="yQc-Hx-rNc" secondAttribute="bottom" constant="8" symbolic="YES" id="UMo-m2-wzh"/>
+                            <constraint firstItem="tAc-ms-epC" firstAttribute="top" secondItem="vy4-qK-XaN" secondAttribute="bottom" constant="8" symbolic="YES" id="dai-8Q-Epu"/>
+                            <constraint firstItem="tAc-ms-epC" firstAttribute="bottom" secondItem="AFX-Hp-6d0" secondAttribute="bottom" id="gNb-ZA-tG0"/>
+                            <constraint firstItem="yQc-Hx-rNc" firstAttribute="top" secondItem="pJa-eh-d6F" secondAttribute="top" id="pnU-a4-sWu"/>
+                            <constraint firstItem="vy4-qK-XaN" firstAttribute="leading" secondItem="AFX-Hp-6d0" secondAttribute="leading" constant="16" id="uiv-23-FYf"/>
+                            <constraint firstItem="tAc-ms-epC" firstAttribute="trailing" secondItem="AFX-Hp-6d0" secondAttribute="trailing" id="wJk-Wi-anV"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="SoE-Z3-aGW">
-                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="eLg-uv-6Ah"/>
+                    <navigationItem key="navigationItem" id="jnq-Vz-0PT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="tAc-ms-epC" id="OBI-GC-78c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hx1-FQ-220" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="327.48091603053433" y="-399.29577464788736"/>
+            <point key="canvasLocation" x="325.95419847328242" y="-399.29577464788736"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="EqE-8G-eQa">
             <objects>
                 <tabBarController id="G4u-8j-djn" customClass="CustomTabBarController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="house.fill" catalog="system" itemPositioning="centered" id="U3R-G3-S2Z">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="U3R-G3-S2Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="tintColor"/>
-                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.7317567805653995" green="0.65240539833136613" blue="0.18978422276291176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.99756962059999998" green="0.34763342139999998" blue="0.36824971439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="TPU-Ef-CnC" kind="relationship" relationship="viewControllers" id="Tbw-Q2-v2x"/>
+                        <segue destination="TPU-Ef-CnC" kind="relationship" relationship="viewControllers" id="Axu-cT-LVJ"/>
                         <segue destination="H7U-3U-Zsy" kind="relationship" relationship="viewControllers" id="cYW-qB-LRa"/>
                         <segue destination="sED-0c-dnx" kind="relationship" relationship="viewControllers" id="qJ7-EX-86L"/>
                     </connections>
@@ -85,8 +163,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="PopularHeader" width="1637" height="875"/>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="preview" width="200" height="200"/>
         <image name="wineglass.fill" catalog="system" width="95" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
