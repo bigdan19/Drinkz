@@ -67,7 +67,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="58" id="qvW-Jd-QvJ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
