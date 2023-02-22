@@ -76,6 +76,10 @@ extension HomeVC: UICollectionViewDataSource {
         cell.label.text = popularDrinks[indexPath.item].strDrink
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Have to create a segue or programmatricaly to load vc with drinks
+    }
 }
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
