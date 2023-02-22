@@ -20,6 +20,7 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIsAlcoholicLabel: UILabel!
     
+    @IBOutlet weak var backButtonPressed: UIButton!
     
     @IBOutlet weak var coctailInstructionsTextView: UITextView!
     
@@ -44,4 +45,10 @@ class SelectedPopularCoctailVC: UIViewController {
         coctailInstructionsTextView.text = selectedDrink.strInstructions
         
     }
+    
+    @IBAction func backButtonTouched(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
 }
