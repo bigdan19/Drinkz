@@ -10,34 +10,42 @@ import SDWebImage
 
 class HomeVC: UIViewController {
     
-    var images: [UIImage] = []
-    
     var popularDrinks = [Drink]()
+    
+    let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/popular.php"
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewWillLayoutSubviews() {
-        
-        let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/popular.php"
-        
-        
-        if let url = URL(string: urlString) {
-            
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                if let data = data {
-                    self.parse(json: data)
-                    DispatchQueue.main.async {
-                        self.collectionView.reloadData()
-                    }
-                } else {
-                    print("HTTP Request failed")
-                }
-            }
-            task.resume()
-        }
+        urlRequest()
     }
     
+    // Creating urlRequest
+    func urlRequest() {
+        // Create url from String
+        guard let url = URL(string: urlString) else {
+            print("Error: cannot create URL from String")
+            return
+        }
+        // Creating task(URL Session)
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            // Checking data and parsing it
+            if let data = data {
+                self.parse(json: data)
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            } else {
+                print("Error: Data could not be parsed")
+            }
+        }
+        task.resume()
+    }
     
+    // Parsing json data
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
@@ -51,15 +59,17 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        images.append(UIImage(named: "drink1")!)
-        images.append(UIImage(named: "drink2")!)
-        images.append(UIImage(named: "drink3")!)
-        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
+            destination.drink = popularDrinks[index.row]
+        }
     }
 }
 
@@ -79,6 +89,8 @@ extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Have to create a segue or programmatricaly to load vc with drinks
+        // pushToDrinkVC
+        
     }
 }
 
