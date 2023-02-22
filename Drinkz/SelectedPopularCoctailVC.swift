@@ -17,35 +17,10 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIsAlcoholicLabel: UILabel!
     
-    @IBOutlet weak var coctailInstructionsText: UILabel!
     
+    @IBOutlet weak var coctailInstructionsTextView: UITextView!
     
-    @IBOutlet weak var ingredient1: UILabel!
-    
-    @IBOutlet weak var ingredient2: UILabel!
-    
-    @IBOutlet weak var ingredient3: UILabel!
-    
-    @IBOutlet weak var ingredient4: UILabel!
-   
-    @IBOutlet weak var ingredient5: UILabel!
-    
-    @IBOutlet weak var ingredient6: UILabel!
-    
-    @IBOutlet weak var ingredient7: UILabel!
-    
-    @IBOutlet weak var ingredient8: UILabel!
-    
-    @IBOutlet weak var ingredient9: UILabel!
-    
-    @IBOutlet weak var ingredient10: UILabel!
-    
-    @IBOutlet weak var ingredient11: UILabel!
-    
-    @IBOutlet weak var ingredient12: UILabel!
-    
-    
-    
+    @IBOutlet weak var coctailIngredientsTextView: UITextView!
     
     
     override func viewDidLoad() {

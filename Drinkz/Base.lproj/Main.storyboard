@@ -295,6 +295,8 @@ Juice of 1/2 Lemon
                         <outlet property="coctailCategoryLabel" destination="0Rb-BS-kMM" id="chn-xT-R5D"/>
                         <outlet property="coctailGlassLabel" destination="fQs-2Z-NR5" id="Acs-ga-Qac"/>
                         <outlet property="coctailImage" destination="44r-Tf-2Qp" id="GFU-ep-ZwR"/>
+                        <outlet property="coctailIngredientsTextView" destination="pIi-PE-Dwz" id="ag2-2F-pyb"/>
+                        <outlet property="coctailInstructionsTextView" destination="3Oi-Ei-AAv" id="rPQ-Zm-Y8s"/>
                         <outlet property="coctailIsAlcoholicLabel" destination="E0p-Es-0dr" id="L75-jK-UUh"/>
                     </connections>
                 </viewController>
