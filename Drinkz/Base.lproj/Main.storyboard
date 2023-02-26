@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopularHeader" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-Hx-rNc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="210.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="dE5-7y-zji"/>
                                 </constraints>
@@ -228,10 +228,10 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-PE-Dwz">
-                                <rect key="frame" x="16" y="705.33333333333337" width="361" height="100"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-PE-Dwz">
+                                <rect key="frame" x="202" y="705" width="175" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Y7M-hB-fQb"/>
+                                    <constraint firstAttribute="height" constant="100" id="rNF-3j-EXR"/>
                                 </constraints>
                                 <string key="text">2 oz Blended whiskey
 Juice of 1/2 Lemon
@@ -262,17 +262,32 @@ Juice of 1/2 Lemon
                                     <constraint firstAttribute="width" constant="220" id="G8k-kZ-LPy"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-xP-bSz">
+                                <rect key="frame" x="16" y="705" width="175" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="Cqj-CP-eqS"/>
+                                    <constraint firstAttribute="height" constant="100" id="ZZv-ur-Fr1"/>
+                                </constraints>
+                                <string key="text">2 oz Blended whiskey
+Juice of 1/2 Lemon
+1/2 tsp Powdered sugar
+1 Cherry
+1/2 slice Lemon</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RM1-VX-d6u"/>
                         <color key="backgroundColor" red="0.89211312520135311" green="0.89211312520135311" blue="0.89211312520135311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="pIi-PE-Dwz" firstAttribute="leading" secondItem="4VT-xP-bSz" secondAttribute="trailing" constant="11" id="3v5-OF-5Tb"/>
                             <constraint firstItem="9OY-cy-pli" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="81F-af-oLw"/>
                             <constraint firstItem="qF7-NP-SdN" firstAttribute="top" secondItem="3Oi-Ei-AAv" secondAttribute="bottom" constant="25" id="8RN-OX-6ug"/>
-                            <constraint firstItem="pIi-PE-Dwz" firstAttribute="top" secondItem="qF7-NP-SdN" secondAttribute="bottom" constant="10" id="9ya-tR-6KN"/>
+                            <constraint firstItem="4VT-xP-bSz" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="9Se-9o-h0L"/>
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="qF7-NP-SdN" secondAttribute="trailing" constant="16" id="CNn-eN-nid"/>
                             <constraint firstItem="SUD-S8-RUG" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="EkN-Un-Gqe"/>
                             <constraint firstItem="0Rb-BS-kMM" firstAttribute="top" secondItem="SUD-S8-RUG" secondAttribute="bottom" constant="7" id="EqN-Qz-Mpk"/>
-                            <constraint firstItem="pIi-PE-Dwz" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="IfO-HR-Mfx"/>
                             <constraint firstItem="9OY-cy-pli" firstAttribute="top" secondItem="0Rb-BS-kMM" secondAttribute="bottom" constant="7" id="Myw-Le-PW8"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="idY-Nz-JJe" secondAttribute="trailing" constant="8" symbolic="YES" id="NLp-Cp-7je"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SUD-S8-RUG" secondAttribute="trailing" constant="8" symbolic="YES" id="OBc-1U-Onh"/>
@@ -280,15 +295,16 @@ Juice of 1/2 Lemon
                             <constraint firstItem="cTK-bZ-JVJ" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="Q5E-eA-pLQ"/>
                             <constraint firstItem="qF7-NP-SdN" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="QqM-33-TTQ"/>
                             <constraint firstItem="Znw-Ia-g8x" firstAttribute="top" secondItem="pCY-3i-iUZ" secondAttribute="top" constant="10" id="T7R-gx-K3s"/>
+                            <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="pIi-PE-Dwz" secondAttribute="trailing" constant="16" id="Tef-Qp-4Os"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" secondItem="E0p-Es-0dr" secondAttribute="trailing" constant="-10" id="U5K-yL-3x1"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Znw-Ia-g8x" secondAttribute="trailing" constant="20" symbolic="YES" id="UH8-s3-Qs5"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9OY-cy-pli" secondAttribute="trailing" constant="8" symbolic="YES" id="UWT-3r-LVz"/>
                             <constraint firstItem="0Rb-BS-kMM" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="X54-h7-STe"/>
                             <constraint firstItem="3Oi-Ei-AAv" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="YY5-9J-cYj"/>
                             <constraint firstItem="fQs-2Z-NR5" firstAttribute="top" secondItem="9OY-cy-pli" secondAttribute="bottom" constant="7" id="Z09-kP-D4O"/>
+                            <constraint firstItem="4VT-xP-bSz" firstAttribute="top" secondItem="qF7-NP-SdN" secondAttribute="bottom" constant="9.6699999999999999" id="ZMY-gg-bxO"/>
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="44r-Tf-2Qp" secondAttribute="trailing" constant="16" id="Zbz-G3-PiU"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="top" secondItem="cTK-bZ-JVJ" secondAttribute="bottom" constant="8" id="bVG-AS-RCh"/>
-                            <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="pIi-PE-Dwz" secondAttribute="trailing" constant="16" id="dxY-AQ-jl6"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" secondItem="fQs-2Z-NR5" secondAttribute="trailing" constant="-10" id="ecb-aN-87K"/>
                             <constraint firstItem="gYf-QM-H6m" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="h9U-wS-Xos"/>
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="gYf-QM-H6m" secondAttribute="trailing" constant="16" id="iPb-cu-toH"/>
@@ -302,6 +318,7 @@ Juice of 1/2 Lemon
                             <constraint firstItem="3Oi-Ei-AAv" firstAttribute="top" secondItem="gYf-QM-H6m" secondAttribute="bottom" constant="8" symbolic="YES" id="uWW-dy-39e"/>
                             <constraint firstItem="fQs-2Z-NR5" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="wus-0f-cK1"/>
                             <constraint firstItem="E0p-Es-0dr" firstAttribute="top" secondItem="idY-Nz-JJe" secondAttribute="bottom" constant="7" id="xcP-WV-Uyl"/>
+                            <constraint firstItem="pIi-PE-Dwz" firstAttribute="top" secondItem="qF7-NP-SdN" secondAttribute="bottom" constant="9.6699999999999999" id="xdY-GW-hHG"/>
                             <constraint firstItem="E0p-Es-0dr" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="zog-er-sfO"/>
                             <constraint firstItem="44r-Tf-2Qp" firstAttribute="leading" secondItem="0Rb-BS-kMM" secondAttribute="trailing" constant="-10" id="zuq-3V-FtG"/>
                         </constraints>
@@ -315,6 +332,7 @@ Juice of 1/2 Lemon
                         <outlet property="coctailIngredientsTextView" destination="pIi-PE-Dwz" id="ag2-2F-pyb"/>
                         <outlet property="coctailInstructionsTextView" destination="3Oi-Ei-AAv" id="rPQ-Zm-Y8s"/>
                         <outlet property="coctailIsAlcoholicLabel" destination="E0p-Es-0dr" id="L75-jK-UUh"/>
+                        <outlet property="coctailMeasuresTextView" destination="4VT-xP-bSz" id="1gB-Ac-bpD"/>
                         <outlet property="coctailNameLabel" destination="cTK-bZ-JVJ" id="QCp-SX-ouv"/>
                     </connections>
                 </viewController>

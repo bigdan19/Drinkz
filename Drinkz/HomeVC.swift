@@ -56,6 +56,13 @@ class HomeVC: UIViewController {
         }
     }
     
+//    func showErrorAlert(title errorTitle: String, message errorMessage: String) {
+//        let alertController = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//        alertController.addAction(okAction)
+//        present(alertController, animated: true, completion: nil)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -81,9 +88,11 @@ extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "popularCoctailsCell", for: indexPath) as! PopularCoctailsCollectionViewCell
-        let url = URL(string: popularDrinks[indexPath.item].strDrinkThumb)
-        cell.image.sd_setImage(with: url)
-        cell.label.text = popularDrinks[indexPath.item].strDrink
+        if let imageUrl = popularDrinks[indexPath.item].imageUrl {
+            let url = URL(string: imageUrl)
+            cell.image.sd_setImage(with: url)
+        }
+        cell.label.text = popularDrinks[indexPath.item].name
         return cell
     }
     

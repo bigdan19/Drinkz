@@ -13,41 +13,65 @@ struct listOfPopularDrinks: Codable {
 }
 
 struct Drink: Codable {
-    var idDrink: String
-    var strDrink: String
-    var strCategory: String
-    var strAlcoholic: String
-    var strGlass: String
-    var strInstructions: String
-    var strDrinkThumb: String
-    var strIngredient1: String?
-    var strIngredient2: String?
-    var strIngredient3: String?
-    var strIngredient4: String?
-    var strIngredient5: String?
-    var strIngredient6: String?
-    var strIngredient7: String?
-    var strIngredient8: String?
-    var strIngredient9: String?
-    var strIngredient10: String?
-    var strIngredient11: String?
-    var strIngredient12: String?
-    var strIngredient13: String?
-    var strIngredient14: String?
-    var strIngredient15: String?
-    var strMeasure1: String?
-    var strMeasure2: String?
-    var strMeasure3: String?
-    var strMeasure4: String?
-    var strMeasure5: String?
-    var strMeasure6: String?
-    var strMeasure7: String?
-    var strMeasure8: String?
-    var strMeasure9: String?
-    var strMeasure10: String?
-    var strMeasure11: String?
-    var strMeasure12: String?
-    var strMeasure13: String?
-    var strMeasure14: String?
-    var strMeasure15: String?
+    let name: String
+    let instructions: String
+    let imageUrl: String?
+    let category: String
+    let glass: String
+    let alcoholic: String
+    
+    //arrays for ingredients and measeure
+    let ingredients: [String]
+    let measures: [String]
+    //custom special coding key which stands for any string
+    //e.g. instead of key ingredient1 dynamic string stands for "any string key"
+    struct DynamicStringKeys: CodingKey {
+        var stringValue: String
+        var intValue: Int?
+        init?(stringValue: String) {
+            self.stringValue = stringValue
+        }
+        init?(intValue: Int) {
+            self.stringValue = "\(intValue)";
+            self.intValue = intValue
+        }
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name = "strDrink"
+        case instructions = "strInstructions"
+        case imageUrl = "strDrinkThumb"
+        case category = "strCategory"
+        case glass = "strGlass"
+        case alcoholic = "strAlcoholic"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        name = try container.decode(String.self, forKey: .name)
+        instructions = try container.decode(String.self, forKey: .instructions)
+        imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
+        category = try container.decode(String.self, forKey: .category)
+        glass = try container.decode(String.self, forKey: .glass)
+        alcoholic = try container.decode(String.self, forKey: .alcoholic)
+        //create container will all keys in the JSON
+        let dynamicContainer = try decoder.container(keyedBy: DynamicStringKeys.self)
+        var localIngredients: [String] = []
+        var localMeasures: [String] = []
+        //iterate over dynamic keys
+        for key in dynamicContainer.allKeys {
+            if let str = try? dynamicContainer.decode(String.self, forKey: key) {
+                /**
+                 check if key starts with strIngredient or strMeasure and add value to the corresponsign array
+                 */
+                if key.stringValue.hasPrefix("strIngredient") {
+                    localIngredients.append(str)
+                } else if key.stringValue.hasPrefix("strMeasure") {
+                    localMeasures.append(str)
+                }
+            }
+        }
+        self.ingredients = localIngredients
+        self.measures = localMeasures
+    }
 }

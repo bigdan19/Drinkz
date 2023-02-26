@@ -26,6 +26,8 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIngredientsTextView: UITextView!
     
+    @IBOutlet weak var coctailMeasuresTextView: UITextView!
+    
     var drink: Drink!
     
     override func viewDidLoad() {
@@ -35,14 +37,30 @@ class SelectedPopularCoctailVC: UIViewController {
             print("Error no coctail being passed")
             return
         }
+        if let imageUrl = selectedDrink.imageUrl {
+            let url = URL(string: imageUrl)
+            coctailImage.sd_setImage(with: url)
+        }
+        coctailNameLabel.text = selectedDrink.name
+        coctailCategoryLabel.text = selectedDrink.category
+        coctailGlassLabel.text = selectedDrink.glass
+        coctailIsAlcoholicLabel.text = selectedDrink.alcoholic
+        coctailInstructionsTextView.text = selectedDrink.instructions
+        print("THis is count of ingredients : \(selectedDrink.ingredients)")
+        print("THis is count of measures : \(selectedDrink.measures)")
+//        for i in 0 ..< selectedDrink.ingredients.count {
+//            coctailIngredientsTextView.text +=  "\(selectedDrink.ingredients[i]) \(selectedDrink.measures[i])"
+//        }
+        coctailMeasuresTextView.text = ""
+        coctailIngredientsTextView.text = ""
         
-        let urlImage = URL(string: selectedDrink.strDrinkThumb)
-        coctailImage.sd_setImage(with: urlImage)
-        coctailNameLabel.text = selectedDrink.strDrink
-        coctailCategoryLabel.text = selectedDrink.strCategory
-        coctailGlassLabel.text = selectedDrink.strGlass
-        coctailIsAlcoholicLabel.text = selectedDrink.strAlcoholic
-        coctailInstructionsTextView.text = selectedDrink.strInstructions
+        for i in 0 ..< selectedDrink.measures.count {
+            coctailMeasuresTextView.text.append(contentsOf: selectedDrink.measures[i] + "\n")
+        }
+        
+        for i in 0 ..< selectedDrink.ingredients.count {
+            coctailIngredientsTextView.text.append(contentsOf: selectedDrink.ingredients[i] + "\n")
+        }
         
     }
     
