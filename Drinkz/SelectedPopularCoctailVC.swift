@@ -46,11 +46,6 @@ class SelectedPopularCoctailVC: UIViewController {
         coctailGlassLabel.text = selectedDrink.glass
         coctailIsAlcoholicLabel.text = selectedDrink.alcoholic
         coctailInstructionsTextView.text = selectedDrink.instructions
-        print("THis is count of ingredients : \(selectedDrink.ingredients)")
-        print("THis is count of measures : \(selectedDrink.measures)")
-//        for i in 0 ..< selectedDrink.ingredients.count {
-//            coctailIngredientsTextView.text +=  "\(selectedDrink.ingredients[i]) \(selectedDrink.measures[i])"
-//        }
         coctailMeasuresTextView.text = ""
         coctailIngredientsTextView.text = ""
         

@@ -58,19 +58,51 @@ struct Drink: Codable {
         let dynamicContainer = try decoder.container(keyedBy: DynamicStringKeys.self)
         var localIngredients: [String] = []
         var localMeasures: [String] = []
-        //iterate over dynamic keys
+        var localIngredientsKeys: [Drink.DynamicStringKeys] = []
+        var localMeasuresKeys: [Drink.DynamicStringKeys] = []
+        
+        
+        // Creating array of Ingredient and array of Measure keys
         for key in dynamicContainer.allKeys {
+            if key.stringValue.hasPrefix("strIngredient") {
+                localIngredientsKeys.append(key)
+            } else if key.stringValue.hasPrefix("strMeasure") {
+                localMeasuresKeys.append(key)
+            }
+        }
+        
+        // Sorting ingredient keys array
+        let ingredientKeysSorted = localIngredientsKeys.sorted { leftIngredient, rightIngredient in
+            let leftNumber = Int(leftIngredient.stringValue.replacingOccurrences(of: "strIngredient", with: "")) ?? .max
+            let rightNumber = Int(rightIngredient.stringValue.replacingOccurrences(of: "strIngredient", with: "")) ?? .max
+            return leftNumber < rightNumber
+        }
+        
+        // Sorting measure keys array
+        let measuresKeysSorted = localMeasuresKeys.sorted { leftMeasure, rightMeasure in
+            let leftNumber = Int(leftMeasure.stringValue.replacingOccurrences(of: "strMeasure", with: "")) ?? .max
+            let rightNumber = Int(rightMeasure.stringValue.replacingOccurrences(of: "strMeasure", with: "")) ?? .max
+            return leftNumber < rightNumber
+        }
+        
+        // Going through all ingredient keys and appending array of local ingredients
+        for key in ingredientKeysSorted {
             if let str = try? dynamicContainer.decode(String.self, forKey: key) {
-                /**
-                 check if key starts with strIngredient or strMeasure and add value to the corresponsign array
-                 */
                 if key.stringValue.hasPrefix("strIngredient") {
                     localIngredients.append(str)
-                } else if key.stringValue.hasPrefix("strMeasure") {
+                }
+            }
+        }
+        
+        // Going through all measure keys and appending array of local measures
+        for key in measuresKeysSorted {
+            if let str = try? dynamicContainer.decode(String.self, forKey: key) {
+                if key.stringValue.hasPrefix("strMeasure") {
                     localMeasures.append(str)
                 }
             }
         }
+        
         self.ingredients = localIngredients
         self.measures = localMeasures
     }

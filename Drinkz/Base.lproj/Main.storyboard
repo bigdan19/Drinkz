@@ -133,105 +133,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF7-NP-SdN">
-                                <rect key="frame" x="16" y="669" width="361" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="704" width="361" height="26.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.329999999999998" id="p2g-0B-hIs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUD-S8-RUG">
-                                <rect key="frame" x="16" y="247.00000000000003" width="87" height="25.333333333333343"/>
+                                <rect key="frame" x="16" y="267" width="91" height="25.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.329999999999998" id="FQe-E0-XaI"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="87" id="UNd-63-xVU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OY-cy-pli">
-                                <rect key="frame" x="15.999999999999996" y="305.66666666666669" width="52.666666666666657" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="bli-48-wJp"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.329999999999998" id="z0C-Nb-iov"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idY-Nz-JJe">
-                                <rect key="frame" x="16" y="365.66666666666669" width="86.666666666666671" height="25.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25.329999999999998" id="957-eK-bez"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86.670000000000002" id="UwD-1A-whZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-BS-kMM">
-                                <rect key="frame" x="16" y="279.33333333333331" width="151" height="19.333333333333314"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="19.329999999999998" id="Hwm-dW-E3D"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old-fashioned glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-2Z-NR5">
-                                <rect key="frame" x="16" y="336.66666666666669" width="151" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="gpQ-GX-bgN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0p-Es-0dr">
-                                <rect key="frame" x="16" y="398" width="151" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="8pK-TY-R0f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-QM-H6m">
-                                <rect key="frame" x="16" y="485" width="361" height="26"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="W5f-lw-cwk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTK-bZ-JVJ">
-                                <rect key="frame" x="16" y="129" width="361" height="90"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9OY-cy-pli">
+                                <rect key="frame" x="15.999999999999996" y="325.66666666666669" width="54.666666666666657" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="JAQ-ve-1Ie"/>
+                                    <constraint firstAttribute="height" constant="24" id="bli-48-wJp"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52.329999999999998" id="z0C-Nb-iov"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idY-Nz-JJe">
+                                <rect key="frame" x="16" y="385.66666666666669" width="90.333333333333329" height="25.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.329999999999998" id="957-eK-bez"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86.670000000000002" id="UwD-1A-whZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-BS-kMM">
+                                <rect key="frame" x="16" y="299.33333333333331" width="151" height="19.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.329999999999998" id="Hwm-dW-E3D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old-fashioned glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-2Z-NR5">
+                                <rect key="frame" x="16" y="356.66666666666669" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="gpQ-GX-bgN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0p-Es-0dr">
+                                <rect key="frame" x="16" y="418" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="8pK-TY-R0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-QM-H6m">
+                                <rect key="frame" x="16" y="505" width="361" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="W5f-lw-cwk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTK-bZ-JVJ">
+                                <rect key="frame" x="16" y="119" width="361" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="JAQ-ve-1Ie"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Oi-Ei-AAv">
-                                <rect key="frame" x="16" y="519" width="361" height="125"/>
+                                <rect key="frame" x="16" y="539" width="361" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="Ozt-jm-uqn"/>
+                                    <constraint firstAttribute="height" constant="140" id="Ozt-jm-uqn"/>
                                 </constraints>
                                 <string key="text">Shake with ice.
 Strain into chilled glass, garnish and serve.
 If served 'On the rocks', strain ingredients into old-fashioned glass filled with ice.</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-PE-Dwz">
-                                <rect key="frame" x="202" y="705" width="175" height="100"/>
+                                <rect key="frame" x="202" y="740" width="175" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="rNF-3j-EXR"/>
+                                    <constraint firstAttribute="height" constant="120" id="rNF-3j-EXR"/>
                                 </constraints>
                                 <string key="text">2 oz Blended whiskey
 Juice of 1/2 Lemon
@@ -239,16 +239,16 @@ Juice of 1/2 Lemon
 1 Cherry
 1/2 slice Lemon</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-Ia-g8x">
-                                <rect key="frame" x="5" y="10" width="86.666666666666671" height="35"/>
+                                <rect key="frame" x="5" y="10" width="70" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="dIh-ks-dsK"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="&lt; Back">
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -256,17 +256,17 @@ Juice of 1/2 Lemon
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink2" translatesAutoresizingMaskIntoConstraints="NO" id="44r-Tf-2Qp">
-                                <rect key="frame" x="157" y="227" width="220" height="220"/>
+                                <rect key="frame" x="157" y="247" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="6HK-T9-3pc"/>
                                     <constraint firstAttribute="width" constant="220" id="G8k-kZ-LPy"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VT-xP-bSz">
-                                <rect key="frame" x="16" y="705" width="175" height="100"/>
+                                <rect key="frame" x="16" y="740" width="175" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="Cqj-CP-eqS"/>
-                                    <constraint firstAttribute="height" constant="100" id="ZZv-ur-Fr1"/>
+                                    <constraint firstAttribute="height" constant="120" id="ZZv-ur-Fr1"/>
                                 </constraints>
                                 <string key="text">2 oz Blended whiskey
 Juice of 1/2 Lemon
@@ -274,12 +274,12 @@ Juice of 1/2 Lemon
 1 Cherry
 1/2 slice Lemon</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RM1-VX-d6u"/>
-                        <color key="backgroundColor" red="0.89211312520135311" green="0.89211312520135311" blue="0.89211312520135311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pIi-PE-Dwz" firstAttribute="leading" secondItem="4VT-xP-bSz" secondAttribute="trailing" constant="11" id="3v5-OF-5Tb"/>
                             <constraint firstItem="9OY-cy-pli" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="81F-af-oLw"/>
@@ -310,7 +310,7 @@ Juice of 1/2 Lemon
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="gYf-QM-H6m" secondAttribute="trailing" constant="16" id="iPb-cu-toH"/>
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="3Oi-Ei-AAv" secondAttribute="trailing" constant="16" id="ipP-Df-Sah"/>
                             <constraint firstItem="gYf-QM-H6m" firstAttribute="top" secondItem="44r-Tf-2Qp" secondAttribute="bottom" constant="38" id="jbj-eP-6gQ"/>
-                            <constraint firstItem="cTK-bZ-JVJ" firstAttribute="top" secondItem="RM1-VX-d6u" secondAttribute="top" constant="70" id="js8-UR-xIF"/>
+                            <constraint firstItem="cTK-bZ-JVJ" firstAttribute="top" secondItem="RM1-VX-d6u" secondAttribute="top" constant="60" id="js8-UR-xIF"/>
                             <constraint firstItem="RM1-VX-d6u" firstAttribute="trailing" secondItem="cTK-bZ-JVJ" secondAttribute="trailing" constant="16" id="lLW-mF-si6"/>
                             <constraint firstItem="Znw-Ia-g8x" firstAttribute="leading" secondItem="pCY-3i-iUZ" secondAttribute="leading" constant="5" id="miT-w0-Ekm"/>
                             <constraint firstItem="idY-Nz-JJe" firstAttribute="leading" secondItem="RM1-VX-d6u" secondAttribute="leading" constant="16" id="oxe-ar-FG6"/>
