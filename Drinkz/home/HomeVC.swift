@@ -16,7 +16,13 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    override func viewWillLayoutSubviews() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        
         urlRequest()
     }
     
@@ -54,23 +60,6 @@ class HomeVC: UIViewController {
         } else {
             print("Error occured decoding data")
         }
-    }
-    
-//    func showErrorAlert(title errorTitle: String, message errorMessage: String) {
-//        let alertController = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
-//        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alertController.addAction(okAction)
-//        present(alertController, animated: true, completion: nil)
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

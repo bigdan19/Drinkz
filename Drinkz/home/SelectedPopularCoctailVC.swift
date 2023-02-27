@@ -58,7 +58,7 @@ class SelectedPopularCoctailVC: UIViewController {
     @IBAction func ShareButtonTapped(_ sender: Any) {
         if let name = coctailNameLabel.text, let category = coctailCategoryLabel.text, let glass = coctailGlassLabel.text, let alcoholic = coctailIsAlcoholicLabel.text, let instructions = coctailInstructionsTextView.text, let ingredients = coctailIngredientsTextView.text {
             
-            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\(instructions)\n\nIngredients\n\(ingredients)"
+            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
             let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)
         } else {
