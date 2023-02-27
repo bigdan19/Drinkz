@@ -20,13 +20,9 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIsAlcoholicLabel: UILabel!
     
-    @IBOutlet weak var backButtonPressed: UIButton!
-    
     @IBOutlet weak var coctailInstructionsTextView: UITextView!
     
     @IBOutlet weak var coctailIngredientsTextView: UITextView!
-    
-    @IBOutlet weak var coctailMeasuresTextView: UITextView!
     
     var drink: Drink!
     
@@ -46,22 +42,20 @@ class SelectedPopularCoctailVC: UIViewController {
         coctailGlassLabel.text = selectedDrink.glass
         coctailIsAlcoholicLabel.text = selectedDrink.alcoholic
         coctailInstructionsTextView.text = selectedDrink.instructions
-        coctailMeasuresTextView.text = ""
         coctailIngredientsTextView.text = ""
         
-        for i in 0 ..< selectedDrink.measures.count {
-            coctailMeasuresTextView.text.append(contentsOf: selectedDrink.measures[i] + "\n")
-        }
-        
-        for i in 0 ..< selectedDrink.ingredients.count {
-            coctailIngredientsTextView.text.append(contentsOf: selectedDrink.ingredients[i] + "\n")
+        for i in 0..<max(selectedDrink.measures.count, selectedDrink.ingredients.count) {
+            if i < selectedDrink.measures.count {
+                coctailIngredientsTextView.text.append(selectedDrink.measures[i] + " ")
+            }
+            if i < selectedDrink.ingredients.count {
+                coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + "\n")
+            }
         }
         
     }
     
-    @IBAction func backButtonTouched(_ sender: Any) {
-        dismiss(animated: true)
+    @IBAction func ShareButtonTapped(_ sender: Any) {
     }
-    
     
 }
