@@ -11,8 +11,8 @@ class SearchByIngredientsTableViewController: UITableViewController {
     
     let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list"
     
-    var list = [ingredient]()
-
+    var list = [Ingredient]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Ingredients"
@@ -48,29 +48,35 @@ class SearchByIngredientsTableViewController: UITableViewController {
     func parse(json: Data) {
         let decoder = JSONDecoder()
         
-        if let jsonIngredients = try? decoder.decode(listOfIngredients.self, from: json) {
+        if let jsonIngredients = try? decoder.decode(ListOfIngredients.self, from: json) {
             list = jsonIngredients.drinks
         } else {
             print("Error occured decoding data")
         }
     }
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return list.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath) as! SearchByIngredientsTableViewCell
         cell.ingredientLabel.text = list[indexPath.row].strIngredient1
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? IngredientsCoctailsListViewController, let index = tableView.indexPathForSelectedRow {
+            destination.ingredient = list[index.row].strIngredient1
+        }
+        
+    }
+    
 }
-

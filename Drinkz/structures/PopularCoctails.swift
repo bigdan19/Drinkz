@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct listOfPopularDrinks: Codable {
+struct ListOfPopularDrinks: Codable {
     var drinks: [Drink]
 }
 

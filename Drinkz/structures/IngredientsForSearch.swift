@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct listOfIngredients: Codable {
-    var drinks: [ingredient]
+struct ListOfIngredients: Codable {
+    var drinks: [Ingredient]
 }
 
-struct ingredient: Codable {
+struct Ingredient: Codable {
     var strIngredient1: String
 }
