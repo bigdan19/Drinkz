@@ -127,43 +127,43 @@
                                 <rect key="frame" x="0.0" y="155" width="393" height="614"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5uF-e9-oL6">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="210" height="260"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="uX4-l5-PrL" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="280"/>
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V5P-Ps-mF9">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-gf-e4J">
                                                     <rect key="frame" x="5" y="8" width="200" height="200"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-UP-jOe">
-                                                    <rect key="frame" x="0.0" y="216" width="210" height="58"/>
+                                                    <rect key="frame" x="0.0" y="212" width="210" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="58" id="Bcb-Jl-gEA"/>
+                                                        <constraint firstAttribute="height" constant="40" id="Bcb-Jl-gEA"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="LTf-UP-jOe" secondAttribute="bottom" constant="6" id="4Wj-19-Tcg"/>
+                                                <constraint firstAttribute="bottom" secondItem="LTf-UP-jOe" secondAttribute="bottom" constant="8" id="4Wj-19-Tcg"/>
                                                 <constraint firstItem="LTf-UP-jOe" firstAttribute="leading" secondItem="V5P-Ps-mF9" secondAttribute="leading" id="DzA-YO-Zzq"/>
                                                 <constraint firstItem="Iup-gf-e4J" firstAttribute="leading" secondItem="V5P-Ps-mF9" secondAttribute="leading" constant="5" id="LGd-hn-o2E"/>
                                                 <constraint firstAttribute="trailing" secondItem="Iup-gf-e4J" secondAttribute="trailing" constant="5" id="Xsv-sO-icT"/>
                                                 <constraint firstAttribute="trailing" secondItem="LTf-UP-jOe" secondAttribute="trailing" id="lvU-68-uhY"/>
-                                                <constraint firstItem="LTf-UP-jOe" firstAttribute="top" secondItem="Iup-gf-e4J" secondAttribute="bottom" constant="8" symbolic="YES" id="oNB-tZ-mds"/>
+                                                <constraint firstItem="LTf-UP-jOe" firstAttribute="top" secondItem="Iup-gf-e4J" secondAttribute="bottom" constant="4" id="oNB-tZ-mds"/>
                                                 <constraint firstItem="Iup-gf-e4J" firstAttribute="top" secondItem="V5P-Ps-mF9" secondAttribute="top" constant="8" id="r2w-89-1aQ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="210" height="280"/>
+                                        <size key="customSize" width="210" height="260"/>
                                         <connections>
                                             <outlet property="image" destination="Iup-gf-e4J" id="OP3-7h-i25"/>
                                             <outlet property="label" destination="LTf-UP-jOe" id="Rly-Ro-Yp1"/>
@@ -200,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYO-Kz-XOv">
-                                <rect key="frame" x="16" y="697" width="361" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="670" width="361" height="26.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.329999999999998" id="zWc-nf-Qfk"/>
                                 </constraints>
@@ -209,7 +209,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GB-J4-Tfg">
-                                <rect key="frame" x="16" y="303" width="91" height="25.333333333333314"/>
+                                <rect key="frame" x="16" y="248.00000000000003" width="91" height="25.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.329999999999998" id="w4t-qN-lEC"/>
                                 </constraints>
@@ -218,7 +218,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-Dc-wTq">
-                                <rect key="frame" x="15.999999999999996" y="361" width="54.666666666666657" height="24"/>
+                                <rect key="frame" x="15.999999999999996" y="306" width="54.666666666666657" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="kfj-hA-Ors"/>
                                 </constraints>
@@ -227,7 +227,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-9d-tL1">
-                                <rect key="frame" x="16" y="421" width="90.333333333333329" height="25.333333333333314"/>
+                                <rect key="frame" x="16" y="366" width="90.333333333333329" height="25.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.329999999999998" id="uwx-iO-4NE"/>
                                 </constraints>
@@ -236,7 +236,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJX-af-OoH">
-                                <rect key="frame" x="15.999999999999993" y="335" width="116.33333333333331" height="19.333333333333314"/>
+                                <rect key="frame" x="15.999999999999993" y="280" width="116.33333333333331" height="19.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.329999999999998" id="N4R-xY-yYg"/>
                                 </constraints>
@@ -245,13 +245,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old-fashioned glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-Va-u8u">
-                                <rect key="frame" x="16" y="392" width="161" height="22"/>
+                                <rect key="frame" x="16" y="337" width="161" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTW-N0-730">
-                                <rect key="frame" x="16" y="454" width="28.666666666666671" height="22"/>
+                                <rect key="frame" x="16" y="399" width="28.666666666666671" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="bCz-No-PNb"/>
                                 </constraints>
@@ -259,17 +259,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOq-WP-Mgg">
-                                <rect key="frame" x="16" y="155" width="361" height="120"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-My-NLT">
+                                <rect key="frame" x="16" y="488" width="361" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="X7L-Y8-GdS"/>
+                                    <constraint firstAttribute="height" constant="26" id="lec-L4-xvP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-4t-auN">
-                                <rect key="frame" x="16" y="549" width="361" height="140"/>
+                                <rect key="frame" x="16" y="522" width="361" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="T1I-zN-Umn"/>
                                 </constraints>
@@ -281,14 +281,14 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink2" translatesAutoresizingMaskIntoConstraints="NO" id="JFE-Ig-L5l">
-                                <rect key="frame" x="157" y="283" width="220" height="220"/>
+                                <rect key="frame" x="157" y="228" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="NAH-hI-qdP"/>
                                     <constraint firstAttribute="height" constant="220" id="Q2p-iH-59G"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBh-Wq-5gt">
-                                <rect key="frame" x="16" y="732" width="175" height="120"/>
+                                <rect key="frame" x="16" y="705" width="175" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="A4e-kS-dT1"/>
                                 </constraints>
@@ -301,12 +301,12 @@ Juice of 1/2 Lemon
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-My-NLT">
-                                <rect key="frame" x="16" y="515" width="361" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOq-WP-Mgg">
+                                <rect key="frame" x="16" y="118" width="361" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="26" id="lec-L4-xvP"/>
+                                    <constraint firstAttribute="height" constant="60" id="X7L-Y8-GdS"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -321,7 +321,7 @@ Juice of 1/2 Lemon
                             <constraint firstItem="uBh-Wq-5gt" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="5xT-5k-svc"/>
                             <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wpS-Va-u8u" secondAttribute="trailing" symbolic="YES" id="92A-ba-mdV"/>
                             <constraint firstItem="GqV-9d-tL1" firstAttribute="top" secondItem="wpS-Va-u8u" secondAttribute="bottom" constant="7" id="9NZ-0r-thc"/>
-                            <constraint firstItem="4GB-J4-Tfg" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="28" id="DAc-Bh-58P"/>
+                            <constraint firstItem="4GB-J4-Tfg" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="70" id="DAc-Bh-58P"/>
                             <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DTW-N0-730" secondAttribute="trailing" constant="8" symbolic="YES" id="HoH-Hw-khf"/>
                             <constraint firstItem="RJX-af-OoH" firstAttribute="top" secondItem="4GB-J4-Tfg" secondAttribute="bottom" constant="6.6699999999999999" id="IBd-x8-y4U"/>
                             <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="JFE-Ig-L5l" secondAttribute="trailing" constant="16" id="LSa-gN-gGk"/>
@@ -335,13 +335,13 @@ Juice of 1/2 Lemon
                             <constraint firstItem="AYO-Kz-XOv" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="gDC-QB-G8P"/>
                             <constraint firstItem="Grg-My-NLT" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="gQX-UB-h16"/>
                             <constraint firstItem="tbE-Dc-wTq" firstAttribute="top" secondItem="RJX-af-OoH" secondAttribute="bottom" constant="6.6699999999999999" id="h6x-cj-7uA"/>
-                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="8" symbolic="YES" id="jJd-TF-8lv"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="50" id="jJd-TF-8lv"/>
                             <constraint firstItem="ecl-4t-auN" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="jWV-SZ-xLU"/>
-                            <constraint firstItem="fOq-WP-Mgg" firstAttribute="top" secondItem="mCf-JK-8FM" secondAttribute="top" id="nd6-pc-i4X"/>
+                            <constraint firstItem="fOq-WP-Mgg" firstAttribute="top" secondItem="mCf-JK-8FM" secondAttribute="top" constant="-37" id="nd6-pc-i4X"/>
                             <constraint firstItem="DTW-N0-730" firstAttribute="top" secondItem="GqV-9d-tL1" secondAttribute="bottom" constant="7.6699999999999999" id="ntr-LV-YkY"/>
                             <constraint firstItem="GqV-9d-tL1" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="rep-WK-Zbp"/>
                             <constraint firstItem="tbE-Dc-wTq" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="snH-Hc-sch"/>
-                            <constraint firstItem="Grg-My-NLT" firstAttribute="top" secondItem="JFE-Ig-L5l" secondAttribute="bottom" constant="12" id="svp-BO-95M"/>
+                            <constraint firstItem="Grg-My-NLT" firstAttribute="top" secondItem="JFE-Ig-L5l" secondAttribute="bottom" constant="40" id="svp-BO-95M"/>
                             <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="fOq-WP-Mgg" secondAttribute="trailing" constant="16" id="tQe-V2-Djc"/>
                             <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RJX-af-OoH" secondAttribute="trailing" constant="8" symbolic="YES" id="tzH-bv-wbL"/>
                             <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="AYO-Kz-XOv" secondAttribute="trailing" constant="16" id="uxQ-20-BqZ"/>
@@ -375,7 +375,7 @@ Juice of 1/2 Lemon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopularHeader" translatesAutoresizingMaskIntoConstraints="NO" id="yQc-Hx-rNc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="210.00000000000003"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="210" id="dE5-7y-zji"/>
                                 </constraints>
@@ -384,28 +384,28 @@ Juice of 1/2 Lemon
                                 <rect key="frame" x="0.0" y="269" width="393" height="500"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HkV-wk-hcD">
-                                    <size key="itemSize" width="210" height="280"/>
+                                    <size key="itemSize" width="210" height="260"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="6qf-Hb-Gva" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="280"/>
+                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2SH-FX-Yoh">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="280"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-iN-0hf">
                                                     <rect key="frame" x="5" y="8" width="200" height="200"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cny-pd-Zk6">
-                                                    <rect key="frame" x="0.0" y="216" width="210" height="58"/>
+                                                    <rect key="frame" x="0.0" y="212" width="210" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="58" id="qvW-Jd-QvJ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="qvW-Jd-QvJ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -413,14 +413,14 @@ Juice of 1/2 Lemon
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="k0f-iN-0hf" secondAttribute="trailing" constant="5" id="9bZ-dJ-nZ9"/>
                                                 <constraint firstItem="cny-pd-Zk6" firstAttribute="leading" secondItem="2SH-FX-Yoh" secondAttribute="leading" id="C7u-DB-hrO"/>
-                                                <constraint firstItem="cny-pd-Zk6" firstAttribute="top" secondItem="k0f-iN-0hf" secondAttribute="bottom" constant="8" symbolic="YES" id="DcS-4h-0YG"/>
-                                                <constraint firstAttribute="bottom" secondItem="cny-pd-Zk6" secondAttribute="bottom" constant="6" id="FrU-Wv-aRu"/>
+                                                <constraint firstItem="cny-pd-Zk6" firstAttribute="top" secondItem="k0f-iN-0hf" secondAttribute="bottom" constant="4" id="DcS-4h-0YG"/>
+                                                <constraint firstAttribute="bottom" secondItem="cny-pd-Zk6" secondAttribute="bottom" constant="8" id="FrU-Wv-aRu"/>
                                                 <constraint firstAttribute="trailing" secondItem="cny-pd-Zk6" secondAttribute="trailing" id="PMG-sD-cRC"/>
                                                 <constraint firstItem="k0f-iN-0hf" firstAttribute="top" secondItem="2SH-FX-Yoh" secondAttribute="top" constant="8" id="VDa-se-clG"/>
                                                 <constraint firstItem="k0f-iN-0hf" firstAttribute="leading" secondItem="2SH-FX-Yoh" secondAttribute="leading" constant="5" id="rCi-eM-Oxt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="210" height="280"/>
+                                        <size key="customSize" width="210" height="260"/>
                                         <connections>
                                             <outlet property="image" destination="k0f-iN-0hf" id="iTN-er-D7C"/>
                                             <outlet property="label" destination="cny-pd-Zk6" id="DXz-uY-Rxo"/>
@@ -460,7 +460,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hx1-FQ-220" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1891" y="727"/>
+            <point key="canvasLocation" x="-1892.3664122137404" y="726.76056338028172"/>
         </scene>
         <!--Selected Popular CoctailVC-->
         <scene sceneID="K4e-dt-LXG">
@@ -550,7 +550,7 @@ Juice of 1/2 Lemon
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="JAQ-ve-1Ie"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
