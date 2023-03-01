@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2492CC2D36DE2557DD88AD46 /* Pods_Drinkz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA7AC06E5F154D2562056FD7 /* Pods_Drinkz.framework */; };
 		650A86AF299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A86AE299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift */; };
+		6551A0A629AEC6ED009DF5E9 /* SelectedCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */; };
 		6594AC9829A011CD00101756 /* PopularCoctails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594AC9729A011CD00101756 /* PopularCoctails.swift */; };
 		6594DF9A2996DE76005D0395 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594DF992996DE76005D0395 /* AppDelegate.swift */; };
 		6594DF9C2996DE76005D0395 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594DF9B2996DE76005D0395 /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		2EDBC3D18674D3BA0ABF6009 /* Pods-Drinkz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Drinkz.debug.xcconfig"; path = "Target Support Files/Pods-Drinkz/Pods-Drinkz.debug.xcconfig"; sourceTree = "<group>"; };
 		650A86AE299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPopularCoctailVC.swift; sourceTree = "<group>"; };
+		6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCocktailViewController.swift; sourceTree = "<group>"; };
 		6594AC9729A011CD00101756 /* PopularCoctails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCoctails.swift; sourceTree = "<group>"; };
 		6594DF962996DE76005D0395 /* Drinkz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinkz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6594DF992996DE76005D0395 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				6594DFB12996E633005D0395 /* CoctailsVC.swift */,
 				65A837A329AD57F000F6FBFF /* SearchByIngredientsTableViewController.swift */,
 				65A837B129AD629D00F6FBFF /* IngredientsCoctailsListViewController.swift */,
+				6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */,
 			);
 			path = coctail;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				6594DF9C2996DE76005D0395 /* SceneDelegate.swift in Sources */,
 				6594DFAE2996E56B005D0395 /* CustomTabBarController.swift in Sources */,
 				6594DFB22996E633005D0395 /* CoctailsVC.swift in Sources */,
+				6551A0A629AEC6ED009DF5E9 /* SelectedCocktailViewController.swift in Sources */,
 				65A837B429AD678300F6FBFF /* ListOfCoctailsUsingIngredient.swift in Sources */,
 				650A86AF299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift in Sources */,
 				65B26C40299A9FAD00DCDFF6 /* PopularCoctailsCollectionViewCell.swift in Sources */,

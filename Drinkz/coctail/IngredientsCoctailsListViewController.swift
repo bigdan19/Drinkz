@@ -19,7 +19,7 @@ class IngredientsCoctailsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = ingredient
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -33,7 +33,6 @@ class IngredientsCoctailsListViewController: UIViewController {
             return
         }
         urlString.append(ingredientURL.lowercased().replacingOccurrences(of: " ", with: "%20"))
-        print("URL \(urlString.lowercased())")
         guard let url = URL(string: urlString) else {
             print("Error: cannot create URL from String")
             return
@@ -66,7 +65,13 @@ class IngredientsCoctailsListViewController: UIViewController {
             print("Error occured decoding data")
         }
     }
-}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SelectedCocktailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
+            destination.id = coctails[index.row].idDrink
+            }
+        }
+    }
 
 
 extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
@@ -86,6 +91,12 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
+    
+    
+    
+    
+    
+    
 }
 
 extension IngredientsCoctailsListViewController: UICollectionViewDelegateFlowLayout {

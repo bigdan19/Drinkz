@@ -13,7 +13,6 @@
         <!--CoctailsVC-->
         <scene sceneID="tJs-zt-ofw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-TY-vqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="H7U-3U-Zsy" customClass="CoctailsVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YwG-ca-FKK">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -55,6 +54,7 @@
                         <outlet property="searchByIngredientPicture" destination="DRH-5m-rbq" id="o71-Gj-X85"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-TY-vqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228.2442748091603" y="726.76056338028172"/>
         </scene>
@@ -167,6 +167,7 @@
                                         <connections>
                                             <outlet property="image" destination="Iup-gf-e4J" id="OP3-7h-i25"/>
                                             <outlet property="label" destination="LTf-UP-jOe" id="Rly-Ro-Yp1"/>
+                                            <segue destination="qfD-YJ-Agf" kind="show" identifier="drinkFromList" id="sIJ-Py-W6e"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -189,6 +190,181 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6T-Y0-wCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2735.1145038167938" y="726.76056338028172"/>
+        </scene>
+        <!--Selected Cocktail View Controller-->
+        <scene sceneID="nJK-oA-MU4">
+            <objects>
+                <viewController id="qfD-YJ-Agf" customClass="SelectedCocktailViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z8D-We-LQ1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYO-Kz-XOv">
+                                <rect key="frame" x="16" y="697" width="361" height="26.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.329999999999998" id="zWc-nf-Qfk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4GB-J4-Tfg">
+                                <rect key="frame" x="16" y="303" width="91" height="25.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.329999999999998" id="w4t-qN-lEC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-Dc-wTq">
+                                <rect key="frame" x="15.999999999999996" y="361" width="54.666666666666657" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="kfj-hA-Ors"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-9d-tL1">
+                                <rect key="frame" x="16" y="421" width="90.333333333333329" height="25.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25.329999999999998" id="uwx-iO-4NE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJX-af-OoH">
+                                <rect key="frame" x="15.999999999999993" y="335" width="116.33333333333331" height="19.333333333333314"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.329999999999998" id="N4R-xY-yYg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old-fashioned glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-Va-u8u">
+                                <rect key="frame" x="16" y="392" width="161" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTW-N0-730">
+                                <rect key="frame" x="16" y="454" width="28.666666666666671" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="bCz-No-PNb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOq-WP-Mgg">
+                                <rect key="frame" x="16" y="155" width="361" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="X7L-Y8-GdS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-4t-auN">
+                                <rect key="frame" x="16" y="549" width="361" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="T1I-zN-Umn"/>
+                                </constraints>
+                                <string key="text">Shake with ice.
+Strain into chilled glass, garnish and serve.
+If served 'On the rocks', strain ingredients into old-fashioned glass filled with ice.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink2" translatesAutoresizingMaskIntoConstraints="NO" id="JFE-Ig-L5l">
+                                <rect key="frame" x="157" y="283" width="220" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="NAH-hI-qdP"/>
+                                    <constraint firstAttribute="height" constant="220" id="Q2p-iH-59G"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBh-Wq-5gt">
+                                <rect key="frame" x="16" y="732" width="175" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="A4e-kS-dT1"/>
+                                </constraints>
+                                <string key="text">2 oz Blended whiskey
+Juice of 1/2 Lemon
+1/2 tsp Powdered sugar
+1 Cherry
+1/2 slice Lemon</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-My-NLT">
+                                <rect key="frame" x="16" y="515" width="361" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="lec-L4-xvP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mCf-JK-8FM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4GB-J4-Tfg" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="13x-d4-EHt"/>
+                            <constraint firstItem="ecl-4t-auN" firstAttribute="top" secondItem="Grg-My-NLT" secondAttribute="bottom" constant="8" symbolic="YES" id="2rN-94-jd5"/>
+                            <constraint firstItem="DTW-N0-730" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="3ou-j5-zE2"/>
+                            <constraint firstItem="wpS-Va-u8u" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="4kg-9E-HVP"/>
+                            <constraint firstItem="uBh-Wq-5gt" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="5xT-5k-svc"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wpS-Va-u8u" secondAttribute="trailing" symbolic="YES" id="92A-ba-mdV"/>
+                            <constraint firstItem="GqV-9d-tL1" firstAttribute="top" secondItem="wpS-Va-u8u" secondAttribute="bottom" constant="7" id="9NZ-0r-thc"/>
+                            <constraint firstItem="4GB-J4-Tfg" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="28" id="DAc-Bh-58P"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DTW-N0-730" secondAttribute="trailing" constant="8" symbolic="YES" id="HoH-Hw-khf"/>
+                            <constraint firstItem="RJX-af-OoH" firstAttribute="top" secondItem="4GB-J4-Tfg" secondAttribute="bottom" constant="6.6699999999999999" id="IBd-x8-y4U"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="JFE-Ig-L5l" secondAttribute="trailing" constant="16" id="LSa-gN-gGk"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GqV-9d-tL1" secondAttribute="trailing" constant="8" symbolic="YES" id="LoL-t1-SxE"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tbE-Dc-wTq" secondAttribute="trailing" constant="8" symbolic="YES" id="QYw-Zi-QPk"/>
+                            <constraint firstItem="fOq-WP-Mgg" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="Uqc-a2-NZe"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="ecl-4t-auN" secondAttribute="trailing" constant="16" id="Vrw-Pd-UQI"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="Grg-My-NLT" secondAttribute="trailing" constant="16" id="YZd-o1-meL"/>
+                            <constraint firstItem="uBh-Wq-5gt" firstAttribute="top" secondItem="AYO-Kz-XOv" secondAttribute="bottom" constant="8.6699999999999999" id="dBe-MP-TEW"/>
+                            <constraint firstItem="RJX-af-OoH" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="e0h-Qg-NOj"/>
+                            <constraint firstItem="AYO-Kz-XOv" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="gDC-QB-G8P"/>
+                            <constraint firstItem="Grg-My-NLT" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="gQX-UB-h16"/>
+                            <constraint firstItem="tbE-Dc-wTq" firstAttribute="top" secondItem="RJX-af-OoH" secondAttribute="bottom" constant="6.6699999999999999" id="h6x-cj-7uA"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="top" secondItem="fOq-WP-Mgg" secondAttribute="bottom" constant="8" symbolic="YES" id="jJd-TF-8lv"/>
+                            <constraint firstItem="ecl-4t-auN" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="jWV-SZ-xLU"/>
+                            <constraint firstItem="fOq-WP-Mgg" firstAttribute="top" secondItem="mCf-JK-8FM" secondAttribute="top" id="nd6-pc-i4X"/>
+                            <constraint firstItem="DTW-N0-730" firstAttribute="top" secondItem="GqV-9d-tL1" secondAttribute="bottom" constant="7.6699999999999999" id="ntr-LV-YkY"/>
+                            <constraint firstItem="GqV-9d-tL1" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="rep-WK-Zbp"/>
+                            <constraint firstItem="tbE-Dc-wTq" firstAttribute="leading" secondItem="mCf-JK-8FM" secondAttribute="leading" constant="16" id="snH-Hc-sch"/>
+                            <constraint firstItem="Grg-My-NLT" firstAttribute="top" secondItem="JFE-Ig-L5l" secondAttribute="bottom" constant="12" id="svp-BO-95M"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="fOq-WP-Mgg" secondAttribute="trailing" constant="16" id="tQe-V2-Djc"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RJX-af-OoH" secondAttribute="trailing" constant="8" symbolic="YES" id="tzH-bv-wbL"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="AYO-Kz-XOv" secondAttribute="trailing" constant="16" id="uxQ-20-BqZ"/>
+                            <constraint firstItem="AYO-Kz-XOv" firstAttribute="top" secondItem="ecl-4t-auN" secondAttribute="bottom" constant="8" symbolic="YES" id="wQc-nd-Dnd"/>
+                            <constraint firstItem="JFE-Ig-L5l" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4GB-J4-Tfg" secondAttribute="trailing" constant="8" symbolic="YES" id="zhS-v5-dU7"/>
+                            <constraint firstItem="mCf-JK-8FM" firstAttribute="trailing" secondItem="uBh-Wq-5gt" secondAttribute="trailing" constant="202" id="znH-Bg-Pbp"/>
+                            <constraint firstItem="wpS-Va-u8u" firstAttribute="top" secondItem="tbE-Dc-wTq" secondAttribute="bottom" constant="7" id="zrk-bO-2tU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j5b-T8-YqQ"/>
+                    <connections>
+                        <outlet property="cocktailAlcoholicLabel" destination="DTW-N0-730" id="cVG-o4-Pf6"/>
+                        <outlet property="cocktailCategoryLabel" destination="RJX-af-OoH" id="3zv-h1-2Oh"/>
+                        <outlet property="cocktailGlassLabel" destination="wpS-Va-u8u" id="s7N-J8-jbb"/>
+                        <outlet property="cocktailImage" destination="JFE-Ig-L5l" id="rSb-gz-FGy"/>
+                        <outlet property="cocktailIngredientTextView" destination="uBh-Wq-5gt" id="RBE-mG-CWX"/>
+                        <outlet property="cocktailInstructionTextView" destination="ecl-4t-auN" id="NTl-Ja-P7I"/>
+                        <outlet property="cocktailLabel" destination="fOq-WP-Mgg" id="clB-oX-df1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tod-Yq-3M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487.7862595419847" y="726.76056338028172"/>
         </scene>
         <!--Home-->
         <scene sceneID="srv-W0-B0Y">

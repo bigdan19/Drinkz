@@ -64,9 +64,5 @@ class SelectedPopularCoctailVC: UIViewController {
         } else {
             print("error occured")
         }
-            
-            
-        
     }
-    
 }
