@@ -95,6 +95,29 @@ class SearchCocktailByNameTableViewController: UITableViewController {
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchBar.endEditing(true)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if searching {
+            if segue.identifier == "showCoctailFromList" {
+                let destinationVC = segue.destination as! SelectedPopularCoctailVC
+                
+                if let index = tableView.indexPathForSelectedRow {
+                    let selectedDrink = searchList[index.row]
+                    destinationVC.drink = selectedDrink
+                }
+            }
+        } else {
+            if segue.identifier == "showCoctailFromList" {
+                let destinationVC = segue.destination as! SelectedPopularCoctailVC
+                
+                if let index = tableView.indexPathForSelectedRow {
+                    let selectedDrink = list[index.row]
+                    destinationVC.drink = selectedDrink
+                }
+            }
+        }
+    }
+    
 }
 
 extension SearchCocktailByNameTableViewController: UISearchBarDelegate {

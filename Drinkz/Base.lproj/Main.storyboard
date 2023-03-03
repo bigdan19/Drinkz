@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G4u-8j-djn">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -15,28 +15,28 @@
             <objects>
                 <viewController id="H7U-3U-Zsy" customClass="CoctailsVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YwG-ca-FKK">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-Pm-xeR">
-                                <rect key="frame" x="10" y="103" width="373" height="656"/>
+                                <rect key="frame" x="10" y="103" width="410" height="736"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByIngredient" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-5m-rbq">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="208.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="235.33333333333334"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="O2Z-c1-z1f"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByName" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-Gw-FL6">
-                                        <rect key="frame" x="0.0" y="223.66666666666669" width="373" height="208.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="250.33333333333331" width="410" height="235.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="1Je-DZ-oby"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchMostLatestCocktails" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-vN-2Og">
-                                        <rect key="frame" x="0.0" y="447.33333333333343" width="373" height="208.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="500.66666666666657" width="410" height="235.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="nbx-Ke-d5o"/>
@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
-                                <rect key="frame" x="66" y="184.66666666666666" width="261" height="45.333333333333343"/>
+                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333343"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by ingredient">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkw-J7-b9F">
-                                <rect key="frame" x="55" y="632" width="283" height="45.333333333333371"/>
+                                <rect key="frame" x="73.666666666666686" y="698.66666666666663" width="283" height="45.333333333333371"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search latest cocktails">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-aQ-LMm">
-                                <rect key="frame" x="92.333333333333329" y="408.33333333333331" width="208.66666666666669" height="45.333333333333314"/>
+                                <rect key="frame" x="110.66666666666667" y="448.33333333333331" width="208.66666666666663" height="45.333333333333314"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by name">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,11 +114,11 @@
             <objects>
                 <tableViewController id="2ki-h6-7Li" customClass="SearchCocktailByNameTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rfz-ln-u27">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="pXS-Qa-5xo">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -127,10 +127,10 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cocktail" rowHeight="89" id="ouU-E4-bMI" customClass="SearchCoctailByNameTableViewCell" customModule="Drinkz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="89"/>
+                                <rect key="frame" x="0.0" y="94" width="430" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ouU-E4-bMI" id="a0a-3W-zcw">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="89"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cocktailIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rZc-Kz-ff8">
@@ -147,7 +147,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIi-bF-uuI">
-                                            <rect key="frame" x="97" y="42" width="276" height="42"/>
+                                            <rect key="frame" x="97" y="42" width="313" height="42"/>
                                             <string key="text">Category: spirits
 Glass: tall glass</string>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -173,6 +173,7 @@ Glass: tall glass</string>
                                     <outlet property="cocktailImage" destination="rZc-Kz-ff8" id="dtg-ON-dA3"/>
                                     <outlet property="cocktailLabel" destination="z7w-tI-bKV" id="nTy-Yg-21m"/>
                                     <outlet property="infoLabel" destination="JIi-bF-uuI" id="2Ta-sF-U0g"/>
+                                    <segue destination="1A9-HG-bPj" kind="show" identifier="showCoctailFromList" id="WzG-sr-xGh"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -195,11 +196,11 @@ Glass: tall glass</string>
             <objects>
                 <tableViewController id="WFb-zP-bsR" customClass="SearchByIngredientsTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="YiM-lv-HlM">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="fnN-no-tgL">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -208,10 +209,10 @@ Glass: tall glass</string>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredient" rowHeight="70" id="Fsc-OQ-MUC" customClass="SearchByIngredientsTableViewCell" customModule="Drinkz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="70"/>
+                                <rect key="frame" x="0.0" y="94" width="430" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fsc-OQ-MUC" id="nWW-Ll-4DF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ingredientIcon" translatesAutoresizingMaskIntoConstraints="NO" id="1aB-9p-IhW">
@@ -264,11 +265,11 @@ Glass: tall glass</string>
             <objects>
                 <viewController id="d0m-Z7-3C8" customClass="IngredientsCoctailsListViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GoC-Qx-Do7">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5x6-uW-mVU">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5uF-e9-oL6">
                                     <size key="itemSize" width="210" height="260"/>
@@ -278,7 +279,7 @@ Glass: tall glass</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="uX4-l5-PrL" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V5P-Ps-mF9">
                                             <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
@@ -340,11 +341,11 @@ Glass: tall glass</string>
             <objects>
                 <viewController id="qfD-YJ-Agf" customClass="SelectedCocktailViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z8D-We-LQ1">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYO-Kz-XOv">
-                                <rect key="frame" x="16" y="655" width="361" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="655" width="398" height="26.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.329999999999998" id="zWc-nf-Qfk"/>
                                 </constraints>
@@ -371,7 +372,7 @@ Glass: tall glass</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GqV-9d-tL1">
-                                <rect key="frame" x="16" y="351" width="90.333333333333329" height="25.333333333333314"/>
+                                <rect key="frame" x="16" y="351" width="90.666666666666671" height="25.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.329999999999998" id="uwx-iO-4NE"/>
                                 </constraints>
@@ -395,7 +396,7 @@ Glass: tall glass</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTW-N0-730">
-                                <rect key="frame" x="16" y="384" width="28.666666666666671" height="22"/>
+                                <rect key="frame" x="16" y="384" width="29" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="bCz-No-PNb"/>
                                 </constraints>
@@ -404,7 +405,7 @@ Glass: tall glass</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-My-NLT">
-                                <rect key="frame" x="16" y="473" width="361" height="26"/>
+                                <rect key="frame" x="16" y="473" width="398" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="lec-L4-xvP"/>
                                 </constraints>
@@ -413,7 +414,7 @@ Glass: tall glass</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ecl-4t-auN">
-                                <rect key="frame" x="16" y="507" width="361" height="140"/>
+                                <rect key="frame" x="16" y="507" width="398" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="T1I-zN-Umn"/>
                                 </constraints>
@@ -425,14 +426,14 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink2" translatesAutoresizingMaskIntoConstraints="NO" id="JFE-Ig-L5l">
-                                <rect key="frame" x="157" y="213" width="220" height="220"/>
+                                <rect key="frame" x="194" y="213" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="220" id="NAH-hI-qdP"/>
                                     <constraint firstAttribute="height" constant="220" id="Q2p-iH-59G"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBh-Wq-5gt">
-                                <rect key="frame" x="16" y="690" width="175" height="120"/>
+                                <rect key="frame" x="16" y="690" width="212" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="A4e-kS-dT1"/>
                                 </constraints>
@@ -446,7 +447,7 @@ Juice of 1/2 Lemon
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOq-WP-Mgg">
-                                <rect key="frame" x="16" y="103" width="361" height="60"/>
+                                <rect key="frame" x="16" y="103" width="398" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="X7L-Y8-GdS"/>
                                 </constraints>
@@ -515,11 +516,11 @@ Juice of 1/2 Lemon
             <objects>
                 <viewController id="TPU-Ef-CnC" customClass="HomeVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJa-eh-d6F" customClass="UICollectionView">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tAc-ms-epC">
-                                <rect key="frame" x="0.0" y="103" width="393" height="656"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="736"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HkV-wk-hcD">
                                     <size key="itemSize" width="210" height="240"/>
@@ -529,7 +530,7 @@ Juice of 1/2 Lemon
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="6qf-Hb-Gva" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="91.666666666666671" y="0.0" width="210" height="240"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2SH-FX-Yoh">
                                             <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
@@ -591,11 +592,11 @@ Juice of 1/2 Lemon
             <objects>
                 <viewController id="1A9-HG-bPj" customClass="SelectedPopularCoctailVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pCY-3i-iUZ">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qF7-NP-SdN">
-                                <rect key="frame" x="16" y="670" width="361" height="26.333333333333371"/>
+                                <rect key="frame" x="16" y="670" width="398" height="26.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26.329999999999998" id="p2g-0B-hIs"/>
                                 </constraints>
@@ -624,7 +625,7 @@ Juice of 1/2 Lemon
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idY-Nz-JJe">
-                                <rect key="frame" x="15" y="356.66666666666669" width="90.333333333333329" height="25.333333333333314"/>
+                                <rect key="frame" x="15" y="356.66666666666669" width="90.666666666666671" height="25.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25.329999999999998" id="957-eK-bez"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="86.670000000000002" id="UwD-1A-whZ"/>
@@ -634,7 +635,7 @@ Juice of 1/2 Lemon
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Rb-BS-kMM">
-                                <rect key="frame" x="16" y="265.33333333333331" width="151" height="19.333333333333314"/>
+                                <rect key="frame" x="16" y="265.33333333333331" width="188" height="19.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="19.329999999999998" id="Hwm-dW-E3D"/>
                                 </constraints>
@@ -643,7 +644,7 @@ Juice of 1/2 Lemon
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Old-fashioned glass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQs-2Z-NR5">
-                                <rect key="frame" x="16" y="322.66666666666669" width="151" height="26"/>
+                                <rect key="frame" x="16" y="322.66666666666669" width="188" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="gpQ-GX-bgN"/>
                                 </constraints>
@@ -652,7 +653,7 @@ Juice of 1/2 Lemon
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYf-QM-H6m">
-                                <rect key="frame" x="16" y="471" width="361" height="26"/>
+                                <rect key="frame" x="16" y="471" width="398" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="W5f-lw-cwk"/>
                                 </constraints>
@@ -661,7 +662,7 @@ Juice of 1/2 Lemon
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Oi-Ei-AAv">
-                                <rect key="frame" x="16" y="505" width="361" height="140"/>
+                                <rect key="frame" x="16" y="505" width="398" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="140" id="Ozt-jm-uqn"/>
                                 </constraints>
@@ -673,7 +674,7 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44r-Tf-2Qp">
-                                <rect key="frame" x="157" y="213" width="220" height="220"/>
+                                <rect key="frame" x="194" y="213" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="6HK-T9-3pc"/>
                                     <constraint firstAttribute="width" constant="220" id="G8k-kZ-LPy"/>
@@ -695,13 +696,13 @@ Juice of 1/2 Lemon
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E0p-Es-0dr">
-                                <rect key="frame" x="16" y="389.66666666666669" width="151" height="22.333333333333314"/>
+                                <rect key="frame" x="16" y="389.66666666666669" width="188" height="22.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTK-bZ-JVJ">
-                                <rect key="frame" x="15" y="103" width="361" height="60"/>
+                                <rect key="frame" x="15" y="103" width="398" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JAQ-ve-1Ie"/>
                                 </constraints>
@@ -763,7 +764,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w27-F1-bQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1569" y="727"/>
+            <point key="canvasLocation" x="613" y="993"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="EqE-8G-eQa">
@@ -795,7 +796,7 @@ Juice of 1/2 Lemon
             <objects>
                 <viewController id="sED-0c-dnx" customClass="IngredientsVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Idk-Sg-QDk">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xsx-Wv-Tr6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -815,7 +816,7 @@ Juice of 1/2 Lemon
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJd-57-e5s">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -837,7 +838,7 @@ Juice of 1/2 Lemon
                     <tabBarItem key="tabBarItem" title="Ingredients" image="basket.fill" catalog="system" id="gVb-Iw-aBS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="3RT-kg-utM">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -858,7 +859,7 @@ Juice of 1/2 Lemon
                     <navigationItem key="navigationItem" id="Ajh-Ze-JaJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" clipsSubviews="YES" contentMode="scaleToFill" id="kBK-ZS-4BK">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -874,6 +875,9 @@ Juice of 1/2 Lemon
             <point key="canvasLocation" x="-3031" y="727"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WzG-sr-xGh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
         <image name="cocktailIcon" width="512" height="512"/>
