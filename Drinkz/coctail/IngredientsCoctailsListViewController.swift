@@ -11,19 +11,23 @@ class IngredientsCoctailsListViewController: UIViewController {
     
     
     var urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="
-    var ingredient: String!
+    var ingredient: String?
     
     var coctails = [Coctail]()
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = ingredient
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        updateUI()
         urlRequest()
+    }
+    
+    func updateUI (){
+        title = ingredient
     }
     
     // Creating urlRequest
@@ -32,6 +36,7 @@ class IngredientsCoctailsListViewController: UIViewController {
             print("Error getting ingredient")
             return
         }
+        // Creating URL that has ingredient key ( if there is space replaced with %20)
         urlString.append(ingredientURL.lowercased().replacingOccurrences(of: " ", with: "%20"))
         guard let url = URL(string: urlString) else {
             print("Error: cannot create URL from String")
@@ -66,14 +71,16 @@ class IngredientsCoctailsListViewController: UIViewController {
         }
     }
     
+    // Preparing for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SelectedCocktailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
             destination.id = coctails[index.row].idDrink
-            }
         }
     }
+}
 
 
+// Extension to IngredientsCoctailsListViewController to conform to UICollectionViewDataSource
 extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         coctails.count
@@ -91,14 +98,9 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
-    
-    
-    
-    
-    
-    
 }
 
+// Extension to IngredientsCoctailsListViewController to conform to UICollectionViewDelegateFlowLayout
 extension IngredientsCoctailsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 210, height: 260)

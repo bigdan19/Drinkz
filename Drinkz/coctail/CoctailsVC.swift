@@ -12,19 +12,31 @@ class CoctailsVC: UIViewController {
     @IBOutlet weak var searchByIngredientLabel: UIButton!
     @IBOutlet weak var searchByIngredientPicture: UIImageView!
     
+    @IBOutlet weak var searchByNamePicture: UIImageView!
+    @IBOutlet weak var searchByNameLabel: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    func updateUI () {
         title = "Coctails Search"
         searchByIngredientPicture.layer.cornerRadius = 25
         searchByIngredientLabel.layer.masksToBounds = true
         searchByIngredientLabel.layer.cornerRadius = 15
+        searchByNamePicture.layer.cornerRadius = 25
+        searchByNameLabel.layer.masksToBounds = true
+        searchByNameLabel.layer.cornerRadius = 15
     }
     
     
     
     @IBAction func searchByIngredientButtonPressed(_ sender: Any) {
-        
     }
     
-
+    
+    @IBAction func searchByNameButtonPressed(_ sender: Any) {
+    }
+    
 }

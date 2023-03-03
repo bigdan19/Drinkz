@@ -24,10 +24,14 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIngredientsTextView: UITextView!
     
-    var drink: Drink!
+    var drink: Drink?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    func updateUI () {
         coctailImage.layer.cornerRadius = 50
         guard let selectedDrink = drink else {
             print("Error no coctail being passed")
@@ -52,9 +56,9 @@ class SelectedPopularCoctailVC: UIViewController {
                 coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + "\n")
             }
         }
-        
     }
     
+    // Share button to share coctail recipe
     @IBAction func ShareButtonTapped(_ sender: Any) {
         if let name = coctailNameLabel.text, let category = coctailCategoryLabel.text, let glass = coctailGlassLabel.text, let alcoholic = coctailIsAlcoholicLabel.text, let instructions = coctailInstructionsTextView.text, let ingredients = coctailIngredientsTextView.text {
             

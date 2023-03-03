@@ -27,18 +27,14 @@ class SelectedCocktailViewController: UIViewController {
     var id: String?
     var cocktail: Drink?
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        if let id = id {
-            stringForCoctail.append(id)
-            urlRequest(stringUrl: stringForCoctail)
-        }
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        cocktailImage.layer.cornerRadius = 50
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
+        if let id = id {
+            stringForCoctail.append(id)
+            cocktailImage.layer.cornerRadius = 50
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
+            urlRequest(stringUrl: stringForCoctail)
+        }
     }
     
     @objc func shareButtonTapped() {
@@ -52,7 +48,7 @@ class SelectedCocktailViewController: UIViewController {
         }
     }
     
-    func createUI() {
+    func updateUI() {
         DispatchQueue.main.async {
             if let cocktail = self.cocktail {
                 if let imageUrl = cocktail.imageUrl {
@@ -79,23 +75,23 @@ class SelectedCocktailViewController: UIViewController {
     }
     
     func urlRequest(stringUrl: String) {
-            guard let url = URL(string: stringUrl) else {
-                print("Error: cannot create URL from String")
-                return
+        guard let url = URL(string: stringUrl) else {
+            print("Error: cannot create URL from String")
+            return
+        }
+        // Creating task(URL Session)
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
             }
-            // Creating task(URL Session)
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                if let error = error {
-                    print("Error: \(error.localizedDescription)")
-                }
-                // Checking data and parsing it
-                if let data = data {
-                    self.parse(json: data)
-                } else {
-                    print("Error: Data could not be parsed")
-                }
+            // Checking data and parsing it
+            if let data = data {
+                self.parse(json: data)
+            } else {
+                print("Error: Data could not be parsed")
             }
-            task.resume()
+        }
+        task.resume()
     }
     
     // Parsing json data
@@ -104,11 +100,10 @@ class SelectedCocktailViewController: UIViewController {
         
         if let jsonCoctail = try? decoder.decode(ListOfPopularDrinks.self, from: json) {
             cocktail = jsonCoctail.drinks[0]
-            createUI()
+            updateUI()
         } else {
             // I have to investigate as it is falling into error ... and printing this message
             print("Error occured decoding data")
         }
     }
-
 }

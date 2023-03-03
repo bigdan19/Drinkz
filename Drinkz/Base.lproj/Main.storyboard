@@ -25,9 +25,9 @@
                                     <constraint firstAttribute="height" constant="180" id="O2Z-c1-z1f"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
-                                <rect key="frame" x="75.000000000000014" y="243.66666666666666" width="243.33333333333337" height="42.666666666666657"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Search by Ingredient">
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
+                                <rect key="frame" x="75.000000000000014" y="243.66666666666663" width="243.33333333333337" height="43"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search by ingredient">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -37,13 +37,36 @@
                                     <segue destination="WFb-zP-bsR" kind="show" id="jg0-Jk-JrG"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByName" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-Gw-FL6">
+                                <rect key="frame" x="30" y="375" width="333" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="1Je-DZ-oby"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-aQ-LMm">
+                                <rect key="frame" x="99.333333333333329" y="443.66666666666669" width="194.66666666666669" height="43"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search by name">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="24"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchByNameButtonPressed:" destination="H7U-3U-Zsy" eventType="touchUpInside" id="Wu3-cQ-7of"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xGI-cg-3YL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Oa3-aQ-LMm" firstAttribute="centerX" secondItem="oQf-Gw-FL6" secondAttribute="centerX" id="GDi-Z9-iiK"/>
                             <constraint firstItem="Odg-du-X8B" firstAttribute="centerY" secondItem="DRH-5m-rbq" secondAttribute="centerY" id="JiK-yo-DUY"/>
                             <constraint firstItem="DRH-5m-rbq" firstAttribute="leading" secondItem="xGI-cg-3YL" secondAttribute="leading" constant="30" id="NBC-9v-rjZ"/>
+                            <constraint firstItem="xGI-cg-3YL" firstAttribute="trailing" secondItem="oQf-Gw-FL6" secondAttribute="trailing" constant="30" id="RfI-ds-ORA"/>
                             <constraint firstItem="Odg-du-X8B" firstAttribute="centerX" secondItem="DRH-5m-rbq" secondAttribute="centerX" id="Rvz-vl-Coa"/>
+                            <constraint firstItem="oQf-Gw-FL6" firstAttribute="top" secondItem="DRH-5m-rbq" secondAttribute="bottom" constant="20" id="UhP-L1-Hhx"/>
+                            <constraint firstItem="Oa3-aQ-LMm" firstAttribute="centerY" secondItem="oQf-Gw-FL6" secondAttribute="centerY" id="aSJ-Ah-Lfd"/>
+                            <constraint firstItem="oQf-Gw-FL6" firstAttribute="leading" secondItem="xGI-cg-3YL" secondAttribute="leading" constant="30" id="sfx-pu-eVj"/>
                             <constraint firstItem="DRH-5m-rbq" firstAttribute="top" secondItem="xGI-cg-3YL" secondAttribute="top" constant="20" id="y5a-F1-NsR"/>
                             <constraint firstItem="xGI-cg-3YL" firstAttribute="trailing" secondItem="DRH-5m-rbq" secondAttribute="trailing" constant="30" id="zXT-b8-6Yk"/>
                         </constraints>
@@ -51,7 +74,9 @@
                     <navigationItem key="navigationItem" id="jds-aV-2H3"/>
                     <connections>
                         <outlet property="searchByIngredientLabel" destination="Odg-du-X8B" id="LXj-KA-wOp"/>
-                        <outlet property="searchByIngredientPicture" destination="DRH-5m-rbq" id="o71-Gj-X85"/>
+                        <outlet property="searchByIngredientPicture" destination="DRH-5m-rbq" id="1JW-ea-pht"/>
+                        <outlet property="searchByNameLabel" destination="Oa3-aQ-LMm" id="UoE-g8-6E9"/>
+                        <outlet property="searchByNamePicture" destination="oQf-Gw-FL6" id="No3-QW-TVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-TY-vqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -113,7 +138,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8B-2T-bHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2009.9236641221373" y="726.76056338028172"/>
+            <point key="canvasLocation" x="2047" y="-7"/>
         </scene>
         <!--Ingredients Coctails List View Controller-->
         <scene sceneID="rZ5-Ww-4ED">
@@ -189,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6T-Y0-wCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735.1145038167938" y="726.76056338028172"/>
+            <point key="canvasLocation" x="2834" y="-7"/>
         </scene>
         <!--Selected Cocktail View Controller-->
         <scene sceneID="nJK-oA-MU4">
@@ -364,7 +389,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tod-Yq-3M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3487.7862595419847" y="726.76056338028172"/>
+            <point key="canvasLocation" x="3604" y="-7"/>
         </scene>
         <!--Home-->
         <scene sceneID="srv-W0-B0Y">
@@ -566,7 +591,7 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="drink2" translatesAutoresizingMaskIntoConstraints="NO" id="44r-Tf-2Qp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44r-Tf-2Qp">
                                 <rect key="frame" x="157" y="242" width="220" height="220"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="6HK-T9-3pc"/>
@@ -682,7 +707,7 @@ Juice of 1/2 Lemon
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="tintColor"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.99756962059999998" green="0.34763342139999998" blue="0.36824971439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.60863936373918115" blue="0.061034183405099807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="TPU-Ef-CnC" kind="relationship" relationship="viewControllers" id="Axu-cT-LVJ"/>
@@ -739,6 +764,7 @@ Juice of 1/2 Lemon
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="ingredientsCell" width="512" height="512"/>
         <image name="searchByIngredient" width="1387" height="750"/>
+        <image name="searchByName" width="1387" height="700"/>
         <image name="wineglass.fill" catalog="system" width="95" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

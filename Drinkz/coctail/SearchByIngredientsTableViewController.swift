@@ -15,8 +15,12 @@ class SearchByIngredientsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Ingredients"
+        updateUI()
         urlRequest()
+    }
+    
+    func updateUI() {
+        title = "Ingredients"
     }
     
     // Creating urlRequest
@@ -56,12 +60,10 @@ class SearchByIngredientsTableViewController: UITableViewController {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return list.count
     }
     
@@ -72,6 +74,7 @@ class SearchByIngredientsTableViewController: UITableViewController {
         return cell
     }
     
+    // Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? IngredientsCoctailsListViewController, let index = tableView.indexPathForSelectedRow {
             destination.ingredient = list[index.row].strIngredient1

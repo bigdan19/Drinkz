@@ -7,6 +7,15 @@
 
 import Foundation
 
+struct ListOfCoctails: Codable {
+    var drinks: [Coctail]
+}
+
+struct Coctail: Codable {
+    var strDrink: String
+    var strDrinkThumb: String?
+    var idDrink: String
+}
 
 struct ListOfPopularDrinks: Codable {
     var drinks: [Drink]

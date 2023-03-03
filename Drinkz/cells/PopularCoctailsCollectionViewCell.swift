@@ -16,5 +16,4 @@ class PopularCoctailsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         image.layer.cornerRadius = 60
     }
-
 }

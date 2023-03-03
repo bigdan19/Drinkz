@@ -62,6 +62,7 @@ class HomeVC: UIViewController {
         }
     }
     
+    // Preparing for segue to show selected popular drink
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
             destination.drink = popularDrinks[index.row]
@@ -69,7 +70,7 @@ class HomeVC: UIViewController {
     }
 }
 
-
+// extension to HomeVC to conform to DataSource
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         popularDrinks.count
@@ -92,6 +93,7 @@ extension HomeVC: UICollectionViewDataSource {
     }
 }
 
+// extension to HomeVC to conform to DelegateFlowLayout
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 210, height: 260)
