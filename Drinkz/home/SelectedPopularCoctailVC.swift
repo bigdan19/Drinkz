@@ -32,6 +32,7 @@ class SelectedPopularCoctailVC: UIViewController {
     }
     
     func updateUI () {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
         coctailImage.layer.cornerRadius = 50
         guard let selectedDrink = drink else {
             print("Error no coctail being passed")
@@ -59,9 +60,9 @@ class SelectedPopularCoctailVC: UIViewController {
     }
     
     // Share button to share coctail recipe
-    @IBAction func ShareButtonTapped(_ sender: Any) {
+    @objc func shareButtonTapped() {
         if let name = coctailNameLabel.text, let category = coctailCategoryLabel.text, let glass = coctailGlassLabel.text, let alcoholic = coctailIsAlcoholicLabel.text, let instructions = coctailInstructionsTextView.text, let ingredients = coctailIngredientsTextView.text {
-            
+
             let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
             let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)

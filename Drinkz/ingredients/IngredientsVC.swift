@@ -12,6 +12,7 @@ class IngredientsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Ingredients"
     }
     
     

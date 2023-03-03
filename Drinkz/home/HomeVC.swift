@@ -18,7 +18,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Popular cocktails"
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -96,6 +96,6 @@ extension HomeVC: UICollectionViewDataSource {
 // extension to HomeVC to conform to DelegateFlowLayout
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 210, height: 260)
+        return CGSize(width: 210, height: 240)
     }
 }
