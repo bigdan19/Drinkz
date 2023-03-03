@@ -9,12 +9,17 @@ import UIKit
 
 class SearchByIngredientsTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list"
     
     var list = [Ingredient]()
+    var searchList = [Ingredient]()
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.searchBar.delegate = self
         updateUI()
         urlRequest()
     }
@@ -64,22 +69,57 @@ class SearchByIngredientsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        if searching {
+            return searchList.count
+        } else {
+            return list.count
+        }
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath) as! SearchByIngredientsTableViewCell
-        cell.ingredientLabel.text = list[indexPath.row].strIngredient1
+        if searching {
+            cell.ingredientLabel.text = searchList[indexPath.row].strIngredient1
+        } else {
+            cell.ingredientLabel.text = list[indexPath.row].strIngredient1
+        }
         return cell
     }
     
     // Prepare for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? IngredientsCoctailsListViewController, let index = tableView.indexPathForSelectedRow {
-            destination.ingredient = list[index.row].strIngredient1
+            if searching {
+                destination.ingredient = searchList[index.row].strIngredient1
+            } else {
+                destination.ingredient = list[index.row].strIngredient1
+            }
         }
         
     }
     
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
+    
+}
+
+extension SearchByIngredientsTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchList = list.filter{ $0.strIngredient1.lowercased().prefix(searchText.count) == searchText.lowercased() }
+        searching = true
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        // TODO - DISSMISS KEYBOARD WHEN CANCEL IS CLICKED
+    }
 }
