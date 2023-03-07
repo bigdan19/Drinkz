@@ -19,24 +19,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-Pm-xeR">
-                                <rect key="frame" x="10" y="103" width="410" height="736"/>
+                                <rect key="frame" x="10" y="103" width="410" height="600"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByIngredient" translatesAutoresizingMaskIntoConstraints="NO" id="DRH-5m-rbq">
-                                        <rect key="frame" x="0.0" y="0.0" width="410" height="235.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="190"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="O2Z-c1-z1f"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByName" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-Gw-FL6">
-                                        <rect key="frame" x="0.0" y="250.33333333333331" width="410" height="235.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="205" width="410" height="190"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="1Je-DZ-oby"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchMostLatestCocktails" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-vN-2Og">
-                                        <rect key="frame" x="0.0" y="500.66666666666657" width="410" height="235.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="410" width="410" height="190"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="nbx-Ke-d5o"/>
@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
-                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333343"/>
+                                <rect key="frame" x="84.666666666666686" y="175.33333333333334" width="261" height="45.333333333333343"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by ingredient">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkw-J7-b9F">
-                                <rect key="frame" x="73.666666666666686" y="698.66666666666663" width="283" height="45.333333333333371"/>
+                                <rect key="frame" x="73.666666666666686" y="585.33333333333337" width="283" height="45.333333333333371"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search latest cocktails">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -65,10 +65,11 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="searchMostLatestCoctailsButtonPressed:" destination="H7U-3U-Zsy" eventType="touchUpInside" id="XGH-uZ-0yf"/>
+                                    <segue destination="UFu-cp-WVB" kind="show" id="B8y-Dq-pwB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-aQ-LMm">
-                                <rect key="frame" x="110.66666666666667" y="448.33333333333331" width="208.66666666666663" height="45.333333333333314"/>
+                                <rect key="frame" x="110.66666666666667" y="380.33333333333331" width="208.66666666666663" height="45.333333333333314"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by name">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +108,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mO6-TY-vqm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1317" y="-7"/>
+            <point key="canvasLocation" x="-2182" y="1401"/>
         </scene>
         <!--Search Cocktail By Name Table View Controller-->
         <scene sceneID="gZz-C5-nbe">
@@ -189,7 +190,7 @@ Glass: tall glass</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgr-MT-tjd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2313.740458015267" y="117.60563380281691"/>
+            <point key="canvasLocation" x="-1380" y="1401"/>
         </scene>
         <!--Search By Ingredients Table View Controller-->
         <scene sceneID="65y-Hz-1H3">
@@ -258,7 +259,7 @@ Glass: tall glass</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E8B-2T-bHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2315" y="-637"/>
+            <point key="canvasLocation" x="-1380" y="705"/>
         </scene>
         <!--Ingredients Coctails List View Controller-->
         <scene sceneID="rZ5-Ww-4ED">
@@ -279,19 +280,19 @@ Glass: tall glass</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="uX4-l5-PrL" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="V5P-Ps-mF9">
-                                            <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-gf-e4J">
                                                     <rect key="frame" x="5" y="8" width="200" height="200"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTf-UP-jOe">
-                                                    <rect key="frame" x="0.0" y="212" width="210" height="40"/>
+                                                    <rect key="frame" x="0.0" y="210" width="210" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="Bcb-Jl-gEA"/>
+                                                        <constraint firstAttribute="height" constant="30" id="Bcb-Jl-gEA"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -299,16 +300,16 @@ Glass: tall glass</string>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="LTf-UP-jOe" secondAttribute="bottom" constant="8" id="4Wj-19-Tcg"/>
+                                                <constraint firstAttribute="bottom" secondItem="LTf-UP-jOe" secondAttribute="bottom" id="4Wj-19-Tcg"/>
                                                 <constraint firstItem="LTf-UP-jOe" firstAttribute="leading" secondItem="V5P-Ps-mF9" secondAttribute="leading" id="DzA-YO-Zzq"/>
                                                 <constraint firstItem="Iup-gf-e4J" firstAttribute="leading" secondItem="V5P-Ps-mF9" secondAttribute="leading" constant="5" id="LGd-hn-o2E"/>
                                                 <constraint firstAttribute="trailing" secondItem="Iup-gf-e4J" secondAttribute="trailing" constant="5" id="Xsv-sO-icT"/>
                                                 <constraint firstAttribute="trailing" secondItem="LTf-UP-jOe" secondAttribute="trailing" id="lvU-68-uhY"/>
-                                                <constraint firstItem="LTf-UP-jOe" firstAttribute="top" secondItem="Iup-gf-e4J" secondAttribute="bottom" constant="4" id="oNB-tZ-mds"/>
+                                                <constraint firstItem="LTf-UP-jOe" firstAttribute="top" secondItem="Iup-gf-e4J" secondAttribute="bottom" constant="2" id="oNB-tZ-mds"/>
                                                 <constraint firstItem="Iup-gf-e4J" firstAttribute="top" secondItem="V5P-Ps-mF9" secondAttribute="top" constant="8" id="r2w-89-1aQ"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="210" height="260"/>
+                                        <size key="customSize" width="210" height="240"/>
                                         <connections>
                                             <outlet property="image" destination="Iup-gf-e4J" id="OP3-7h-i25"/>
                                             <outlet property="label" destination="LTf-UP-jOe" id="Rly-Ro-Yp1"/>
@@ -334,7 +335,7 @@ Glass: tall glass</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6T-Y0-wCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3114" y="-637"/>
+            <point key="canvasLocation" x="-727" y="705"/>
         </scene>
         <!--Selected Cocktail View Controller-->
         <scene sceneID="nJK-oA-MU4">
@@ -509,7 +510,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tod-Yq-3M4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3961" y="-637"/>
+            <point key="canvasLocation" x="-71" y="705"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="srv-W0-B0Y">
@@ -585,7 +586,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hx1-FQ-220" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2323" y="727"/>
+            <point key="canvasLocation" x="-5242" y="705"/>
         </scene>
         <!--Selected Popular CoctailVC-->
         <scene sceneID="K4e-dt-LXG">
@@ -764,7 +765,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w27-F1-bQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="993"/>
+            <point key="canvasLocation" x="-4397" y="2068"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="EqE-8G-eQa">
@@ -805,7 +806,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j8d-qE-Auv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1140" y="-694"/>
+            <point key="canvasLocation" x="2727" y="705"/>
         </scene>
         <!--Search cocktails-->
         <scene sceneID="vlX-FK-TeL">
@@ -829,7 +830,7 @@ Juice of 1/2 Lemon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6VQ-Dn-LWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="613" y="-7"/>
+            <point key="canvasLocation" x="-2867" y="1401"/>
         </scene>
         <!--Ingredients-->
         <scene sceneID="zAZ-Yy-TAt">
@@ -848,7 +849,7 @@ Juice of 1/2 Lemon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XkX-t7-0bx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1889" y="-694"/>
+            <point key="canvasLocation" x="1991" y="705"/>
         </scene>
         <!--Popular cocktails-->
         <scene sceneID="X02-1q-qL8">
@@ -872,11 +873,87 @@ Juice of 1/2 Lemon
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rL-gT-HBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3031" y="727"/>
+            <point key="canvasLocation" x="-5987" y="705"/>
+        </scene>
+        <!--Latest Cocktails View Controller-->
+        <scene sceneID="stM-wD-zAJ">
+            <objects>
+                <viewController id="UFu-cp-WVB" customClass="LatestCocktailsViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RYS-Za-iJ6" customClass="UICollectionView">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="124-sP-62R">
+                                <rect key="frame" x="0.0" y="103" width="430" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hOW-w1-Km8">
+                                    <size key="itemSize" width="210" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCoctailsCell" id="3lU-p3-6Q6" customClass="PopularCoctailsCollectionViewCell" customModule="Drinkz" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YPG-QK-PeE">
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="240"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FEt-OR-yXO">
+                                                    <rect key="frame" x="5" y="8" width="200" height="200"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WW2-0x-TZr">
+                                                    <rect key="frame" x="0.0" y="211" width="210" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="zmC-Xw-2Tz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="FEt-OR-yXO" secondAttribute="trailing" constant="5" id="3HH-en-plO"/>
+                                                <constraint firstItem="FEt-OR-yXO" firstAttribute="leading" secondItem="YPG-QK-PeE" secondAttribute="leading" constant="5" id="4kt-Ic-5Jz"/>
+                                                <constraint firstItem="WW2-0x-TZr" firstAttribute="leading" secondItem="YPG-QK-PeE" secondAttribute="leading" id="AXX-5x-7My"/>
+                                                <constraint firstItem="WW2-0x-TZr" firstAttribute="top" secondItem="FEt-OR-yXO" secondAttribute="bottom" constant="3" id="VCd-ts-gE2"/>
+                                                <constraint firstAttribute="trailing" secondItem="WW2-0x-TZr" secondAttribute="trailing" id="eml-9a-vOS"/>
+                                                <constraint firstAttribute="bottom" secondItem="WW2-0x-TZr" secondAttribute="bottom" constant="-1" id="mnp-Hf-aEj"/>
+                                                <constraint firstItem="FEt-OR-yXO" firstAttribute="top" secondItem="YPG-QK-PeE" secondAttribute="top" constant="8" id="qh7-i3-UnA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="210" height="240"/>
+                                        <connections>
+                                            <outlet property="image" destination="FEt-OR-yXO" id="8c2-US-4Ur"/>
+                                            <outlet property="label" destination="WW2-0x-TZr" id="shm-fZ-wF5"/>
+                                            <segue destination="1A9-HG-bPj" kind="show" identifier="showLatestCocktails" id="6Hk-tS-fqc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Uo-Da-ASk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="124-sP-62R" firstAttribute="bottom" secondItem="5Uo-Da-ASk" secondAttribute="bottom" constant="-10" id="R8t-NN-VxD"/>
+                            <constraint firstItem="124-sP-62R" firstAttribute="top" secondItem="5Uo-Da-ASk" secondAttribute="top" id="X4g-e6-V5c"/>
+                            <constraint firstItem="124-sP-62R" firstAttribute="leading" secondItem="5Uo-Da-ASk" secondAttribute="leading" id="rnK-Qf-xrQ"/>
+                            <constraint firstItem="124-sP-62R" firstAttribute="trailing" secondItem="5Uo-Da-ASk" secondAttribute="trailing" id="sF8-3G-IWY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="G56-WI-KM2"/>
+                    <connections>
+                        <outlet property="collectionView" destination="124-sP-62R" id="XUe-PL-GiP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3y-Fj-Kt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1380" y="2137"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="WzG-sr-xGh"/>
+        <segue reference="6Hk-tS-fqc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="basket.fill" catalog="system" width="128" height="108"/>
