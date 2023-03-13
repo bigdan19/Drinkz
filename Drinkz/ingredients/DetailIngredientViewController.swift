@@ -24,7 +24,7 @@ class DetailIngredientViewController: UIViewController {
     // TODO CREATE SCROLLVIEW TO SEE DETAILED PAGE INSTEAD OF SCROLLABLE TEXTVIEW
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
         if let sUrl = picURL {
             ingredientImage.sd_setImage(with: sUrl)
         }
@@ -74,6 +74,17 @@ class DetailIngredientViewController: UIViewController {
             item = jsonIngredients.ingredients.first
         } else {
             print("Error occured decoding data")
+        }
+    }
+    
+    @objc func shareButtonTapped() {
+        if let name = ingredientLabel.text, let description = itemTextView.text {
+            let image = ingredientImage.image
+            let textToShare = "\(name) \n\n \(description)"
+            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
+            present(activityViewController, animated: true, completion: nil)
+        } else {
+            print("error occured")
         }
     }
     

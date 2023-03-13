@@ -62,9 +62,9 @@ class SelectedPopularCoctailVC: UIViewController {
     // Share button to share coctail recipe
     @objc func shareButtonTapped() {
         if let name = coctailNameLabel.text, let category = coctailCategoryLabel.text, let glass = coctailGlassLabel.text, let alcoholic = coctailIsAlcoholicLabel.text, let instructions = coctailInstructionsTextView.text, let ingredients = coctailIngredientsTextView.text {
-
+            let image = coctailImage.image
             let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
-            let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)
         } else {
             print("error occured")
