@@ -14,7 +14,7 @@ class IngredientVCTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list"
-    let picURL = "www.thecocktaildb.com/images/ingredients/"
+    let picURL = "https://www.thecocktaildb.com/images/ingredients/"
     
     // gin-Medium.png
     
@@ -67,12 +67,10 @@ class IngredientVCTableViewController: UITableViewController {
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if searching {
             return searchList.count
         } else {
@@ -85,18 +83,35 @@ class IngredientVCTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath) as! SearchByIngredientsTableViewCell
         if searching {
             cell.ingredientLabel.text = searchList[indexPath.row].strIngredient1
-            let strUrl = "\(picURL)\(searchList[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Medium.png"
+            let strUrl = "\(picURL)\(searchList[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Small.png"
             if let url = URL(string: strUrl) {
                 cell.ingredientImage.sd_setImage(with: url)
             }
         } else {
             cell.ingredientLabel.text = list[indexPath.row].strIngredient1
-            let strUrl = "\(picURL)\(list[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Medium.png"
+            let strUrl = "\(picURL)\(list[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Small.png"
             if let url = URL(string: strUrl) {
                 cell.ingredientImage.sd_setImage(with: url)
+            } else {
+                cell.ingredientImage.image = UIImage(named: "gin.png")
             }
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if searching {
+            if let destination = segue.destination as? DetailIngredientViewController, let index = tableView.indexPathsForSelectedRows?.first {
+                destination.picURL = URL(string: "\(picURL)\(searchList[index.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20")).png")
+                destination.ingredientStr = searchList[index.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20")
+            }
+        } else {
+            if let destination = segue.destination as? DetailIngredientViewController, let index = tableView.indexPathsForSelectedRows?.first {
+                destination.picURL = URL(string: "\(picURL)\(list[index.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20")).png")
+                destination.ingredientStr = list[index.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20")
+            }
+        }
+        
     }
 
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
