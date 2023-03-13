@@ -12,7 +12,7 @@ class DetailIngredientViewController: UIViewController {
     @IBOutlet weak var ingredientLabel: UILabel!
     @IBOutlet weak var ingredientImage: UIImageView!
     @IBOutlet weak var itemTextView: UITextView!
-    
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     var picURL: URL?
     var item: Item?
@@ -24,6 +24,7 @@ class DetailIngredientViewController: UIViewController {
     // TODO CREATE SCROLLVIEW TO SEE DETAILED PAGE INSTEAD OF SCROLLABLE TEXTVIEW
     override func viewDidLoad() {
         super.viewDidLoad()
+        descriptionLabel.isHidden = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
         if let sUrl = picURL {
             ingredientImage.sd_setImage(with: sUrl)
@@ -38,7 +39,10 @@ class DetailIngredientViewController: UIViewController {
     
     func reloadView() {
         ingredientLabel.text = item?.strIngredient
-        itemTextView.text = item?.strDescription
+        if let text = item?.strDescription {
+            descriptionLabel.isHidden = false
+            itemTextView.text = text
+        }
     }
     
     // Creating urlRequest

@@ -12,6 +12,7 @@ class SearchByIngredientsTableViewController: UITableViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list"
+    let picURL = "https://www.thecocktaildb.com/images/ingredients/"
     
     var list = [Ingredient]()
     var searchList = [Ingredient]()
@@ -81,8 +82,16 @@ class SearchByIngredientsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath) as! SearchByIngredientsTableViewCell
         if searching {
             cell.ingredientLabel.text = searchList[indexPath.row].strIngredient1
+            let strUrl = "\(picURL)\(searchList[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Small.png"
+            if let url = URL(string: strUrl) {
+                cell.ingredientImage.sd_setImage(with: url)
+            }
         } else {
             cell.ingredientLabel.text = list[indexPath.row].strIngredient1
+            let strUrl = "\(picURL)\(list[indexPath.row].strIngredient1.lowercased().replacingOccurrences(of: " ", with: "%20"))-Small.png"
+            if let url = URL(string: strUrl) {
+                cell.ingredientImage.sd_setImage(with: url)
+            }
         }
         return cell
     }
