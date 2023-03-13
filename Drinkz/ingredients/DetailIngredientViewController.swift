@@ -32,7 +32,6 @@ class DetailIngredientViewController: UIViewController {
         
         if let inStr = ingredientStr {
             ingredientURL += inStr
-            print(ingredientURL)
             urlRequest()
         }
     }
