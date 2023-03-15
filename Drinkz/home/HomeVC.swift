@@ -18,7 +18,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Popular cocktails"
+        title = "Popular Cocktails"
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
@@ -73,7 +73,7 @@ class HomeVC: UIViewController {
 // extension to HomeVC to conform to DataSource
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        popularDrinks.count
+        return popularDrinks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

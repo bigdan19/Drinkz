@@ -24,7 +24,7 @@ class CoctailsVC: UIViewController {
     }
     
     func updateUI () {
-        title = "Search cocktails"
+        title = "Search Cocktails"
         searchByIngredientPicture.layer.cornerRadius = 25
         searchByIngredientLabel.layer.masksToBounds = true
         searchByIngredientLabel.layer.cornerRadius = 15

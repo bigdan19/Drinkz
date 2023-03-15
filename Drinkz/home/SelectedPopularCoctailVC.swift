@@ -24,11 +24,33 @@ class SelectedPopularCoctailVC: UIViewController {
     
     @IBOutlet weak var coctailIngredientsTextView: UITextView!
     
+    @IBOutlet weak var addToFavoritesButton: UIButton!
+    
     var drink: Drink?
+    
+    var isFavorite: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        checkIfIsInFavorites()
+    }
+    
+    @IBAction func addToFavoritesPressed(_ sender: Any) {
+        guard let drink = drink else {
+            return
+        }
+        if isFavorite {
+            //TODO MESSAGE
+        } else {
+            isFavorite = true
+            addToFavoritesButton.setImage(UIImage(named: "added.png"), for: .normal)
+            favoriteCocktails.append(drink)
+            
+        }
     }
     
     func updateUI () {
@@ -55,6 +77,21 @@ class SelectedPopularCoctailVC: UIViewController {
             }
             if i < selectedDrink.ingredients.count {
                 coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + "\n")
+            }
+        }
+    }
+    
+    func checkIfIsInFavorites() {
+        if let cocktail = drink {
+            for i in favoriteCocktails {
+                if cocktail.name == i.name {
+                    addToFavoritesButton.setImage(UIImage(named: "added.png"), for: .normal)
+                    isFavorite = true
+                    return
+                } else {
+                    addToFavoritesButton.setImage(UIImage(named: "add.png"), for: .normal)
+                    isFavorite = false
+                }
             }
         }
     }
