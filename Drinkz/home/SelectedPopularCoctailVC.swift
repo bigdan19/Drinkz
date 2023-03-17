@@ -44,12 +44,27 @@ class SelectedPopularCoctailVC: UIViewController {
             return
         }
         if isFavorite {
-            //TODO MESSAGE
+            isFavorite = false
+            addToFavoritesButton.setImage(UIImage(named: "add.png"), for: .normal)
+            for i in 0..<favoriteCocktails.count{
+                if drink.name == favoriteCocktails[i].name {
+                    favoriteCocktails.remove(at: i)
+                    encodeFavorites()
+                    return
+                }
+            }
         } else {
             isFavorite = true
             addToFavoritesButton.setImage(UIImage(named: "added.png"), for: .normal)
             favoriteCocktails.append(drink)
-            
+            encodeFavorites()
+        }
+    }
+    
+    func encodeFavorites() {
+        let encoder = JSONEncoder()
+        if let encoder = try? encoder.encode(favoriteCocktails){
+            UserDefaults.standard.set(encoder, forKey: "cocktails")
         }
     }
     

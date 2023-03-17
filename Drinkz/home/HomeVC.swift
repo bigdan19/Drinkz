@@ -8,6 +8,8 @@
 import UIKit
 import SDWebImage
 
+var favoriteCocktails = [Drink]()
+
 class HomeVC: UIViewController {
     
     var popularDrinks = [Drink]()
@@ -24,6 +26,12 @@ class HomeVC: UIViewController {
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
         urlRequest()
+        if let savedData = UserDefaults.standard.object(forKey: "cocktails") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedData = try? decoder.decode([Drink].self, from: savedData) {
+                favoriteCocktails = loadedData
+            }
+        }
     }
     
     // Creating urlRequest

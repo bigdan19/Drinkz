@@ -29,14 +29,14 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchByName" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-Gw-FL6">
-                                        <rect key="frame" x="0.0" y="250.33333333333326" width="410" height="235.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="250.33333333333331" width="410" height="235.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="1Je-DZ-oby"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchMostLatestCocktails" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-vN-2Og">
-                                        <rect key="frame" x="0.0" y="500.66666666666652" width="410" height="235.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="500.66666666666657" width="410" height="235.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="190" id="nbx-Ke-d5o"/>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkw-J7-b9F">
-                                <rect key="frame" x="73.666666666666686" y="698.66666666666652" width="283" height="45.333333333333485"/>
+                                <rect key="frame" x="73.666666666666686" y="698.66666666666663" width="283" height="45.333333333333371"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search latest cocktails">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa3-aQ-LMm">
-                                <rect key="frame" x="110.66666666666667" y="448.33333333333326" width="208.66666666666663" height="45.333333333333371"/>
+                                <rect key="frame" x="110.66666666666667" y="448.33333333333331" width="208.66666666666663" height="45.333333333333314"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by name">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -518,9 +518,8 @@ Juice of 1/2 Lemon
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLD-g3-6Xo">
-                                                <rect key="frame" x="345" y="249" width="55" height="55"/>
+                                                <rect key="frame" x="312" y="249" width="88" height="55"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="55" id="cpR-B7-Z4R"/>
                                                     <constraint firstAttribute="height" constant="55" id="tna-EJ-eOP"/>
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
@@ -568,6 +567,7 @@ Juice of 1/2 Lemon
                                             <constraint firstItem="6nc-qI-smA" firstAttribute="top" secondItem="miu-uI-HTd" secondAttribute="top" constant="8" id="kcd-9F-cqg"/>
                                             <constraint firstAttribute="trailing" secondItem="io6-hf-pkm" secondAttribute="trailing" constant="16" id="lOb-6y-hLx"/>
                                             <constraint firstItem="zgF-Og-teF" firstAttribute="top" secondItem="6nc-qI-smA" secondAttribute="bottom" constant="60" id="mxh-c7-nXt"/>
+                                            <constraint firstItem="zLD-g3-6Xo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GYI-Fu-4RA" secondAttribute="trailing" constant="8" symbolic="YES" id="ngt-Fd-w3W"/>
                                             <constraint firstAttribute="height" constant="746" id="pib-z2-qhY"/>
                                             <constraint firstItem="zgF-Og-teF" firstAttribute="leading" secondItem="miu-uI-HTd" secondAttribute="leading" constant="16" id="qDs-kP-UM9"/>
                                             <constraint firstItem="l2x-9h-GsQ" firstAttribute="top" secondItem="io6-hf-pkm" secondAttribute="bottom" constant="20" id="rh4-9f-5wI"/>
@@ -668,7 +668,7 @@ Juice of 1/2 Lemon
                                                     <rect key="frame" x="5" y="8" width="200" height="200"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNw-1S-krh">
-                                                    <rect key="frame" x="0.0" y="210" width="210" height="30"/>
+                                                    <rect key="frame" x="0.0" y="211" width="210" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="1y0-KO-xWf"/>
                                                     </constraints>
@@ -679,10 +679,10 @@ Juice of 1/2 Lemon
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CaE-WV-WqO" firstAttribute="top" secondItem="GzE-ST-Pfv" secondAttribute="top" constant="8" id="IWi-MF-iRH"/>
-                                                <constraint firstAttribute="bottom" secondItem="nNw-1S-krh" secondAttribute="bottom" id="PDa-eu-lub"/>
+                                                <constraint firstAttribute="bottom" secondItem="nNw-1S-krh" secondAttribute="bottom" constant="-1" id="PDa-eu-lub"/>
                                                 <constraint firstItem="nNw-1S-krh" firstAttribute="leading" secondItem="GzE-ST-Pfv" secondAttribute="leading" id="X0o-Ef-3qX"/>
                                                 <constraint firstItem="CaE-WV-WqO" firstAttribute="leading" secondItem="GzE-ST-Pfv" secondAttribute="leading" constant="5" id="gNQ-KF-tf1"/>
-                                                <constraint firstItem="nNw-1S-krh" firstAttribute="top" secondItem="CaE-WV-WqO" secondAttribute="bottom" constant="2" id="mE6-hu-3rk"/>
+                                                <constraint firstItem="nNw-1S-krh" firstAttribute="top" secondItem="CaE-WV-WqO" secondAttribute="bottom" constant="3" id="mE6-hu-3rk"/>
                                                 <constraint firstAttribute="trailing" secondItem="CaE-WV-WqO" secondAttribute="trailing" constant="5" id="s0c-3W-caU"/>
                                                 <constraint firstAttribute="trailing" secondItem="nNw-1S-krh" secondAttribute="trailing" id="wHl-6e-5Jt"/>
                                             </constraints>
@@ -691,6 +691,7 @@ Juice of 1/2 Lemon
                                         <connections>
                                             <outlet property="image" destination="CaE-WV-WqO" id="XXr-fP-68J"/>
                                             <outlet property="label" destination="nNw-1S-krh" id="a6D-J9-9Gy"/>
+                                            <segue destination="ndr-Ts-9Rd" kind="show" identifier="showFavoriteCocktail" id="fgA-tn-Lv2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1224,7 +1225,7 @@ Juice of 1/2 Lemon
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1Cp-Gd-4us"/>
+        <segue reference="fgA-tn-Lv2"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="64" height="64"/>
