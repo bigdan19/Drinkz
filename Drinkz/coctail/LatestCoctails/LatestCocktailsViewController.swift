@@ -8,7 +8,7 @@
 import UIKit
 
 class LatestCocktailsViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var coctails = [Drink]()
@@ -21,59 +21,28 @@ class LatestCocktailsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         updateUI()
-        urlRequest()
+        
+        NetworkManager.shared.loadDrinks(urlString: urlString) { drinks in
+            guard let drinks = drinks else { return }
+            self.coctails = drinks
+            self.collectionView.reloadData()
+        }
     }
     
     func updateUI() {
         title = "Latest Cocktails"
     }
     
-    // Creating urlRequest
-    func urlRequest() {
-        // Creating URL that has ingredient key ( if there is space replaced with %20)
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        // Creating task(URL Session)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            // Checking data and parsing it
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    // Parsing json data
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonCoctails = try? decoder.decode(ListOfPopularDrinks.self, from: json) {
-            coctails = jsonCoctails.drinks
-        } else {
-            print("Error occured decoding data")
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "showLatestCocktails" {
-                let destinationVC = segue.destination as! SelectedPopularCoctailVC
-                
-                if let index = collectionView.indexPathsForSelectedItems?.first {
-                    let selectedDrink = coctails[index.item]
-                    destinationVC.drink = selectedDrink
-                }
+        if segue.identifier == "showLatestCocktails" {
+            let destinationVC = segue.destination as! SelectedPopularCoctailVC
+            
+            if let index = collectionView.indexPathsForSelectedItems?.first {
+                let selectedDrink = coctails[index.item]
+                destinationVC.drink = selectedDrink
             }
         }
+    }
 }
 
 // Extension to LatestCocktailsViewController to conform to UICollectionViewDataSource

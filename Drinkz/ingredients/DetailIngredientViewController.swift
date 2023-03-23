@@ -82,9 +82,8 @@ class DetailIngredientViewController: UIViewController {
     
     @objc func shareButtonTapped() {
         if let name = ingredientLabel.text, let description = itemTextView.text {
-            let image = ingredientImage.image
             let textToShare = "\(name) \n\n \(description)"
-            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)
         } else {
             print("error occured")

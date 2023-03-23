@@ -1,5 +1,5 @@
 //
-//  PopularCoctails.swift
+//  CoctailsStructures.swift
 //  Drinkz
 //
 //  Created by Daniel on 17/02/2023.
@@ -56,30 +56,22 @@ struct Drink: Codable {
     }
     
     func encode(to encoder: Encoder) throws {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(self.name, forKey: .name)
-            try container.encode(self.instructions, forKey: .instructions)
-            try container.encodeIfPresent(self.imageUrl, forKey: .imageUrl)
-            try container.encode(self.category, forKey: .category)
-            try container.encode(self.glass, forKey: .glass)
-            try container.encode(self.alcoholic, forKey: .alcoholic)
-            
-            
-            /**
-             this will pack Drink into same structure as comes from server
-             so decode and encode functions will be simetrick
-             e.g.
-             strIngredient1: Vodka
-             strMeasure1: 50
-             */
-            var dynamicContainer = encoder.container(keyedBy: DynamicStringKeys.self)
-            for (index,ingredient) in self.ingredients.enumerated() {
-                try dynamicContainer.encode(ingredient, forKey: DynamicStringKeys(stringValue: "strIngredient\(index)")!)
-            }
-            for (index, mesure) in self.measures.enumerated() {
-                try dynamicContainer.encode(mesure, forKey: DynamicStringKeys(stringValue: "strMeasure\(index)")!)
-            }
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.name, forKey: .name)
+        try container.encode(self.instructions, forKey: .instructions)
+        try container.encodeIfPresent(self.imageUrl, forKey: .imageUrl)
+        try container.encode(self.category, forKey: .category)
+        try container.encode(self.glass, forKey: .glass)
+        try container.encode(self.alcoholic, forKey: .alcoholic)
+        
+        var dynamicContainer = encoder.container(keyedBy: DynamicStringKeys.self)
+        for (index,ingredient) in self.ingredients.enumerated() {
+            try dynamicContainer.encode(ingredient, forKey: DynamicStringKeys(stringValue: "strIngredient\(index)")!)
         }
+        for (index, mesure) in self.measures.enumerated() {
+            try dynamicContainer.encode(mesure, forKey: DynamicStringKeys(stringValue: "strMeasure\(index)")!)
+        }
+    }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -155,7 +147,13 @@ class DrinksStorage {
             }
         }
     }
-    //override init as private so noone can since
-    //singletone can be instantiated only once
+    
+    func saveFavorites(favoriteCocktails: [Drink]) {
+        let encoder = JSONEncoder()
+        if let encoder = try? encoder.encode(favoriteCocktails){
+            UserDefaults.standard.set(encoder, forKey: "cocktails")
+        }
+    }
+    
     private init() {}
 }

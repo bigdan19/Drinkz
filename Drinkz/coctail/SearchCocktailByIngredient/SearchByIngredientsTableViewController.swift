@@ -22,47 +22,15 @@ class SearchByIngredientsTableViewController: UITableViewController {
         super.viewDidLoad()
         self.searchBar.delegate = self
         updateUI()
-        urlRequest()
+        NetworkManager.shared.loadListOfIngredients(urlString: urlString) { ingredients in
+            guard let ingredients = ingredients else { return }
+            self.list = ingredients
+            self.tableView.reloadData()
+        }
     }
     
     func updateUI() {
         title = "Ingredients"
-    }
-    
-    // Creating urlRequest
-    func urlRequest() {
-        // Create url from String
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        // Creating task(URL Session)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            // Checking data and parsing it
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    // Parsing json data
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonIngredients = try? decoder.decode(ListOfIngredients.self, from: json) {
-            list = jsonIngredients.drinks
-        } else {
-            print("Error occured decoding data")
-        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

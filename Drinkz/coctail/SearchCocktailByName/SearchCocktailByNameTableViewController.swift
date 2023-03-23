@@ -17,53 +17,26 @@ class SearchCocktailByNameTableViewController: UITableViewController {
     var list = [Drink]()
     var searchList = [Drink]()
     var searching = false
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBar.delegate = self
         updateUI()
-        urlRequest()
+        NetworkManager.shared.loadDrinks(urlString: urlString) { drinks in
+            guard let drinks = drinks else { return }
+            self.list = drinks
+            self.tableView.reloadData()
+        }
     }
     
     func updateUI() {
         title = "Cocktails"
     }
     
-    func urlRequest(){
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonCocktails = try? decoder.decode(ListOfPopularDrinks.self, from: json) {
-            list = jsonCocktails.drinks
-        } else {
-            print("Error occured decoding data")
-        }
-    }
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchList.count
@@ -71,7 +44,8 @@ class SearchCocktailByNameTableViewController: UITableViewController {
             return list.count
         }
     }
-
+    
+    // Creating cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cocktail", for: indexPath) as! SearchCoctailByNameTableViewCell
         if searching {
@@ -96,6 +70,7 @@ class SearchCocktailByNameTableViewController: UITableViewController {
         searchBar.endEditing(true)
     }
     
+    // Preparing for segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if searching {
             if segue.identifier == "showCoctailFromList" {
@@ -120,6 +95,7 @@ class SearchCocktailByNameTableViewController: UITableViewController {
     
 }
 
+// Search Bar filter function
 extension SearchCocktailByNameTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchList = list.filter{ $0.name.lowercased().prefix(searchText.count) == searchText.lowercased()}
@@ -129,6 +105,7 @@ extension SearchCocktailByNameTableViewController: UISearchBarDelegate {
         }
     }
     
+    // Search bar cancel button function
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchBar.text = ""

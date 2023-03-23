@@ -11,9 +11,14 @@ class IngredientsCoctailsListViewController: UIViewController {
     
     
     var urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i="
+    
+    var stringForCoctail = "https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i="
+    
     var ingredient: String?
     
     var coctails = [Coctail]()
+    
+    var drinks = [Drink]()
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -38,43 +43,10 @@ class IngredientsCoctailsListViewController: UIViewController {
         }
         // Creating URL that has ingredient key ( if there is space replaced with %20)
         urlString.append(ingredientURL.lowercased().replacingOccurrences(of: " ", with: "%20"))
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        // Creating task(URL Session)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            // Checking data and parsing it
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    // Parsing json data
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonCoctails = try? decoder.decode(ListOfCoctails.self, from: json) {
-            coctails = jsonCoctails.drinks
-        } else {
-            print("Error occured decoding data")
-        }
-    }
-    
-    // Preparing for segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectedCocktailViewController, let index = collectionView.indexPathsForSelectedItems?.first {
-            destination.id = coctails[index.row].idDrink
+        NetworkManager.shared.loadListOfCoctailsFromIngredients(urlString: urlString) { drinks in
+            guard let drinks = drinks else { return }
+            self.coctails = drinks
+            self.collectionView.reloadData()
         }
     }
 }
@@ -96,7 +68,17 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
         return cell
     }
     
+    
+    // ALL THIS NEEDS TO BE CHECKED !!! NOT GETTING ANY DRINK FROM NETWORK MANAGER
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        stringForCoctail.append(coctails[indexPath.item].idDrink)
+//        NetworkManager.shared.loadDrinks(urlString: stringForCoctail) { [weak self] drinks in
+//            guard let drinks = drinks else { return }
+//            let vc = SelectedPopularCoctailVC()
+//            vc.drink = drinks[0]
+//            self?.navigationController?.pushViewController(vc, animated: true)
+//        }
+        
     }
 }
 

@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
-                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333343"/>
+                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333314"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by ingredient">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -313,7 +313,6 @@ Glass: tall glass</string>
                                         <connections>
                                             <outlet property="image" destination="Iup-gf-e4J" id="OP3-7h-i25"/>
                                             <outlet property="label" destination="LTf-UP-jOe" id="Rly-Ro-Yp1"/>
-                                            <segue destination="pQj-MI-xzk" kind="show" identifier="drinkFromList" id="GTf-7t-26I"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1028,10 +1027,10 @@ Juice of 1/2 Lemon
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-Hs-dF0">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dHA-EH-alz">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="746"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="839"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whiskey Sour" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awY-Jg-CBn">
                                                 <rect key="frame" x="16" y="8" width="398" height="60"/>
@@ -1056,7 +1055,7 @@ Juice of 1/2 Lemon
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ordinary Drink" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu3-Tk-4DG">
-                                                <rect key="frame" x="15.999999999999993" y="162.33333333333331" width="116.33333333333331" height="21.666666666666657"/>
+                                                <rect key="frame" x="15.999999999999993" y="162.33333333333334" width="116.33333333333331" height="21.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1113,7 +1112,7 @@ If served 'On the rocks', strain ingredients into old-fashioned glass filled wit
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RS2-II-1A3">
-                                                <rect key="frame" x="16" y="565.66666666666663" width="398" height="170.33333333333337"/>
+                                                <rect key="frame" x="16" y="565.66666666666663" width="398" height="263.33333333333337"/>
                                                 <string key="text">2 oz Blended whiskey
 Juice of 1/2 Lemon
 1/2 tsp Powdered sugar
@@ -1225,7 +1224,7 @@ Juice of 1/2 Lemon
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fgA-tn-Lv2"/>
+        <segue reference="1Cp-Gd-4us"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="64" height="64"/>

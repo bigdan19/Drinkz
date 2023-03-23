@@ -25,7 +25,7 @@ class SelectedCocktailViewController: UIViewController {
     
     var stringForCoctail = "https://www.thecocktaildb.com/api/json/v2/9973533/lookup.php?i="
     var id: String?
-    var cocktail: Drink?
+    var drink: Drink?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +38,20 @@ class SelectedCocktailViewController: UIViewController {
     }
     
     @objc func shareButtonTapped() {
-        if let name = cocktailLabel.text, let category = cocktailCategoryLabel.text, let glass = cocktailGlassLabel.text, let alcoholic = cocktailAlcoholicLabel.text, let instructions = cocktailInstructionTextView.text, let ingredients = cocktailIngredientTextView.text {
-            
-            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
-            let image = cocktailImage.image
-            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
-            present(activityViewController, animated: true, completion: nil)
-        } else {
-            print("error occured")
-        }
+//        if let name = cocktailLabel.text, let category = cocktailCategoryLabel.text, let glass = cocktailGlassLabel.text, let alcoholic = cocktailAlcoholicLabel.text, let instructions = cocktailInstructionTextView.text, let ingredients = cocktailIngredientTextView.text {
+//
+//            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
+//            let image = cocktailImage.image
+//            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
+//            present(activityViewController, animated: true, completion: nil)
+//        } else {
+//            print("error occured")
+//        }
     }
     
     func updateUI() {
         DispatchQueue.main.async {
-            if let cocktail = self.cocktail {
+            if let cocktail = self.drink {
                 if let imageUrl = cocktail.imageUrl {
                     let url = URL(string: imageUrl)
                     self.cocktailImage.sd_setImage(with: url)
@@ -100,7 +100,7 @@ class SelectedCocktailViewController: UIViewController {
         let decoder = JSONDecoder()
         
         if let jsonCoctail = try? decoder.decode(ListOfPopularDrinks.self, from: json) {
-            cocktail = jsonCoctail.drinks[0]
+            drink = jsonCoctail.drinks[0]
             updateUI()
         } else {
             // I have to investigate as it is falling into error ... and printing this message

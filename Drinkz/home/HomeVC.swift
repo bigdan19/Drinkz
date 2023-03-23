@@ -25,48 +25,22 @@ class HomeVC: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         
-        urlRequest()
+        NetworkManager.shared.loadDrinks(urlString: urlString) { drinks in
+            guard let drinks = drinks else { return }
+            self.popularDrinks = drinks
+            self.collectionView.reloadData()
+        }
+        
+        DrinksStorage.shared.loadFavourites()
+    }
+    
+    // Pulling data from UserDefaults and decoding into array of coctails
+    func decodeCocktails() {
         if let savedData = UserDefaults.standard.object(forKey: "cocktails") as? Data {
             let decoder = JSONDecoder()
             if let loadedData = try? decoder.decode([Drink].self, from: savedData) {
                 favoriteCocktails = loadedData
             }
-        }
-    }
-    
-    // Creating urlRequest
-    func urlRequest() {
-        // Create url from String
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        // Creating task(URL Session)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            // Checking data and parsing it
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.collectionView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    // Parsing json data
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonDrinks = try? decoder.decode(ListOfPopularDrinks.self, from: json) {
-            popularDrinks = jsonDrinks.drinks
-        } else {
-            print("Error occured decoding data")
         }
     }
     
@@ -92,12 +66,6 @@ extension HomeVC: UICollectionViewDataSource {
         }
         cell.label.text = popularDrinks[indexPath.item].name
         return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Have to create a segue or programmatricaly to load vc with drinks
-        // pushToDrinkVC
-        
     }
 }
 

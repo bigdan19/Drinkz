@@ -9,7 +9,7 @@ import UIKit
 import SDWebImage
 
 class IngredientVCTableViewController: UITableViewController {
-
+    
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -24,52 +24,19 @@ class IngredientVCTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.searchBar.delegate = self
-        urlRequest()
         title = "Ingredients"
+        self.searchBar.delegate = self
+        NetworkManager.shared.loadListOfIngredients(urlString: urlString) { ingredients in
+            guard let ingredients = ingredients else { return }
+            self.list = ingredients
+            self.tableView.reloadData()
+        }
     }
     
-    // Creating urlRequest
-    func urlRequest() {
-        // Create url from String
-        guard let url = URL(string: urlString) else {
-            print("Error: cannot create URL from String")
-            return
-        }
-        // Creating task(URL Session)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("Error: \(error.localizedDescription)")
-            }
-            // Checking data and parsing it
-            if let data = data {
-                self.parse(json: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else {
-                print("Error: Data could not be parsed")
-            }
-        }
-        task.resume()
-    }
-    
-    // Parsing json data
-    func parse(json: Data) {
-        let decoder = JSONDecoder()
-        
-        if let jsonIngredients = try? decoder.decode(ListOfIngredients.self, from: json) {
-            list = jsonIngredients.drinks
-        } else {
-            print("Error occured decoding data")
-        }
-    }
-
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
             return searchList.count
@@ -77,8 +44,8 @@ class IngredientVCTableViewController: UITableViewController {
             return list.count
         }
     }
-
-   
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredient", for: indexPath) as! SearchByIngredientsTableViewCell
         if searching {
@@ -113,7 +80,7 @@ class IngredientVCTableViewController: UITableViewController {
         }
         
     }
-
+    
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         searchBar.endEditing(true)
     }

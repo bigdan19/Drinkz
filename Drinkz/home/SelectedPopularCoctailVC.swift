@@ -39,6 +39,7 @@ class SelectedPopularCoctailVC: UIViewController {
         checkIfIsInFavorites()
     }
     
+    // StarButton pressed (add to favorites button)
     @IBAction func addToFavoritesPressed(_ sender: Any) {
         guard let drink = drink else {
             return
@@ -49,7 +50,7 @@ class SelectedPopularCoctailVC: UIViewController {
             for i in 0..<favoriteCocktails.count{
                 if drink.name == favoriteCocktails[i].name {
                     favoriteCocktails.remove(at: i)
-                    encodeFavorites()
+                    DrinksStorage.shared.saveFavorites(favoriteCocktails: favoriteCocktails)
                     return
                 }
             }
@@ -57,20 +58,13 @@ class SelectedPopularCoctailVC: UIViewController {
             isFavorite = true
             addToFavoritesButton.setImage(UIImage(named: "added.png"), for: .normal)
             favoriteCocktails.append(drink)
-            encodeFavorites()
+            DrinksStorage.shared.saveFavorites(favoriteCocktails: favoriteCocktails)
         }
     }
     
-    func encodeFavorites() {
-        let encoder = JSONEncoder()
-        if let encoder = try? encoder.encode(favoriteCocktails){
-            UserDefaults.standard.set(encoder, forKey: "cocktails")
-        }
-    }
-    
+    // Updating UI
     func updateUI () {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareButtonTapped))
-        coctailImage.layer.cornerRadius = 50
         guard let selectedDrink = drink else {
             print("Error no coctail being passed")
             return
@@ -79,6 +73,7 @@ class SelectedPopularCoctailVC: UIViewController {
             let url = URL(string: imageUrl)
             coctailImage.sd_setImage(with: url)
         }
+        coctailImage.layer.cornerRadius = 50
         coctailNameLabel.text = selectedDrink.name
         coctailCategoryLabel.text = selectedDrink.category
         coctailGlassLabel.text = selectedDrink.glass
@@ -95,7 +90,7 @@ class SelectedPopularCoctailVC: UIViewController {
             }
         }
     }
-    
+    // Checking if cocktail is in favorites array
     func checkIfIsInFavorites() {
         if let cocktail = drink {
             for i in favoriteCocktails {
@@ -114,9 +109,8 @@ class SelectedPopularCoctailVC: UIViewController {
     // Share button to share coctail recipe
     @objc func shareButtonTapped() {
         if let name = coctailNameLabel.text, let category = coctailCategoryLabel.text, let glass = coctailGlassLabel.text, let alcoholic = coctailIsAlcoholicLabel.text, let instructions = coctailInstructionsTextView.text, let ingredients = coctailIngredientsTextView.text {
-            let image = coctailImage.image
             let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
-            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
+            let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
             present(activityViewController, animated: true, completion: nil)
         } else {
             print("error occured")
