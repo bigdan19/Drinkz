@@ -55,6 +55,32 @@ struct Drink: Codable {
         case alcoholic = "strAlcoholic"
     }
     
+    func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(self.name, forKey: .name)
+            try container.encode(self.instructions, forKey: .instructions)
+            try container.encodeIfPresent(self.imageUrl, forKey: .imageUrl)
+            try container.encode(self.category, forKey: .category)
+            try container.encode(self.glass, forKey: .glass)
+            try container.encode(self.alcoholic, forKey: .alcoholic)
+            
+            
+            /**
+             this will pack Drink into same structure as comes from server
+             so decode and encode functions will be simetrick
+             e.g.
+             strIngredient1: Vodka
+             strMeasure1: 50
+             */
+            var dynamicContainer = encoder.container(keyedBy: DynamicStringKeys.self)
+            for (index,ingredient) in self.ingredients.enumerated() {
+                try dynamicContainer.encode(ingredient, forKey: DynamicStringKeys(stringValue: "strIngredient\(index)")!)
+            }
+            for (index, mesure) in self.measures.enumerated() {
+                try dynamicContainer.encode(mesure, forKey: DynamicStringKeys(stringValue: "strMeasure\(index)")!)
+            }
+        }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
@@ -115,4 +141,21 @@ struct Drink: Codable {
         self.ingredients = localIngredients
         self.measures = localMeasures
     }
+}
+
+class DrinksStorage {
+    static let shared = DrinksStorage()
+    
+    func loadFavourites(){
+        //load favourites from storage first time
+        if let savedData = UserDefaults.standard.object(forKey: "cocktails") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedData = try? decoder.decode([Drink].self, from: savedData) {
+                favoriteCocktails = loadedData
+            }
+        }
+    }
+    //override init as private so noone can since
+    //singletone can be instantiated only once
+    private init() {}
 }
