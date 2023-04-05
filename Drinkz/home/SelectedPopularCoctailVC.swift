@@ -28,13 +28,24 @@ class SelectedPopularCoctailVC: UIViewController {
     
     var drink: Drink?
     
+    var coctailString: String?
+    
     var isFavorite: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        //checking if there is no drink structure and it need to be loaded using loadDrinks function
+        if let coctailString = coctailString {
+            NetworkManager.shared.loadDrinks(urlString: coctailString) { drinks in
+                guard let drinks = drinks else { return }
+                self.drink = drinks.first
+                self.checkIfIsInFavorites()
+                self.updateUI()
+            }
+        } else {
+            updateUI()
+        }
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         checkIfIsInFavorites()
     }

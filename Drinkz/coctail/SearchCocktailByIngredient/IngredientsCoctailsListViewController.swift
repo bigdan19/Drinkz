@@ -49,6 +49,12 @@ class IngredientsCoctailsListViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
+            destination.coctailString = stringForCoctail + coctails[index.item].idDrink
+        }
+    }
 }
 
 
@@ -66,19 +72,6 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
         }
         cell.label.text = coctails[indexPath.item].strDrink
         return cell
-    }
-    
-    
-    // ALL THIS NEEDS TO BE CHECKED !!! NOT GETTING ANY DRINK FROM NETWORK MANAGER
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        stringForCoctail.append(coctails[indexPath.item].idDrink)
-//        NetworkManager.shared.loadDrinks(urlString: stringForCoctail) { [weak self] drinks in
-//            guard let drinks = drinks else { return }
-//            let vc = SelectedPopularCoctailVC()
-//            vc.drink = drinks[0]
-//            self?.navigationController?.pushViewController(vc, animated: true)
-//        }
-        
     }
 }
 
