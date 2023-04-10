@@ -67,11 +67,14 @@ extension HomeVC: UICollectionViewDataSource {
         cell.label.text = popularDrinks[indexPath.item].name
         return cell
     }
+    
 }
 
 // extension to HomeVC to conform to DelegateFlowLayout
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 210, height: 240)
+        let widthCell = (view.frame.width - 10) / 2
+        let heightCell = widthCell + 30
+        return CGSize(width: widthCell, height: heightCell)
     }
 }

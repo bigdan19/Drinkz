@@ -26,3 +26,5 @@ struct Item: Codable {
     var strType: String?
     var strAlcohol: String?
 }
+
+

@@ -21,7 +21,6 @@ class DetailIngredientViewController: UIViewController {
     var ingredientStr: String?
     
     
-    // TODO CREATE SCROLLVIEW TO SEE DETAILED PAGE INSTEAD OF SCROLLABLE TEXTVIEW
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionLabel.isHidden = true

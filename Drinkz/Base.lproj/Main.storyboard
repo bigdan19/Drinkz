@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odg-du-X8B">
-                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333343"/>
+                                <rect key="frame" x="84.666666666666686" y="198" width="261" height="45.333333333333314"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Search by ingredient">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="26"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1017,7 +1017,7 @@ Juice of 1/2 Lemon
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3y-Fj-Kt7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1380" y="2137"/>
+            <point key="canvasLocation" x="-1380" y="2126"/>
         </scene>
         <!--Selected Cocktail View Controller-->
         <scene sceneID="nkA-1X-bTe">
@@ -1225,7 +1225,7 @@ Juice of 1/2 Lemon
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0El-rN-R8U"/>
+        <segue reference="1Cp-Gd-4us"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="add" width="64" height="64"/>

@@ -38,15 +38,14 @@ class SelectedCocktailViewController: UIViewController {
     }
     
     @objc func shareButtonTapped() {
-//        if let name = cocktailLabel.text, let category = cocktailCategoryLabel.text, let glass = cocktailGlassLabel.text, let alcoholic = cocktailAlcoholicLabel.text, let instructions = cocktailInstructionTextView.text, let ingredients = cocktailIngredientTextView.text {
-//
-//            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
-//            let image = cocktailImage.image
-//            let activityViewController = UIActivityViewController(activityItems: [textToShare, image ?? ""], applicationActivities: nil)
-//            present(activityViewController, animated: true, completion: nil)
-//        } else {
-//            print("error occured")
-//        }
+        if let name = cocktailLabel.text, let category = cocktailCategoryLabel.text, let glass = cocktailGlassLabel.text, let alcoholic = cocktailAlcoholicLabel.text, let instructions = cocktailInstructionTextView.text, let ingredients = cocktailIngredientTextView.text {
+
+            let textToShare = "\(name)\n\n\(name) is an \(alcoholic) \(category) that is served in a \(glass)\n\nInstructions\n\n\(instructions)\n\n\nIngredients\n\n\(ingredients)"
+            let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+            present(activityViewController, animated: true, completion: nil)
+        } else {
+            print("error occured")
+        }
     }
     
     func updateUI() {

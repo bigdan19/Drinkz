@@ -78,6 +78,8 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
 // Extension to IngredientsCoctailsListViewController to conform to UICollectionViewDelegateFlowLayout
 extension IngredientsCoctailsListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 210, height: 240)
+        let widthCell = (view.frame.width - 10) / 2
+        let heightCell = widthCell + 30
+        return CGSize(width: widthCell, height: heightCell)
     }
 }
