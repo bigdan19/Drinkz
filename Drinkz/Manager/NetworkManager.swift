@@ -12,6 +12,7 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    // loading array of drinks from url
     func loadDrinks(urlString: String, withCompletion completion: @escaping([Drink]?) -> Void){
         print(urlString)
         guard let url = URL(string: urlString) else {
@@ -29,7 +30,7 @@ class NetworkManager {
         task.resume()
     }
     
-    
+    // loading array of ingredients from url
     func loadListOfIngredients(urlString: String, withCompletion completion: @escaping([Ingredient]?) -> Void) {
         guard let url = URL(string: urlString) else {
             DispatchQueue.main.async { completion(nil) }
@@ -46,6 +47,7 @@ class NetworkManager {
         task.resume()
     }
     
+    // loading array of drinks from custom custom structure
     func loadListOfCoctailsFromIngredients(urlString: String, withCompletion completion: @escaping([Coctail]?) -> Void) {
         guard let url = URL(string: urlString) else {
             DispatchQueue.main.async { completion(nil) }

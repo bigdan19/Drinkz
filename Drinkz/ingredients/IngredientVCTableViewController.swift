@@ -16,8 +16,6 @@ class IngredientVCTableViewController: UITableViewController {
     let urlString = "https://www.thecocktaildb.com/api/json/v2/9973533/list.php?i=list"
     let picURL = "https://www.thecocktaildb.com/images/ingredients/"
     
-    // gin-Medium.png
-    
     var list = [Ingredient]()
     var searchList = [Ingredient]()
     var searching = false
