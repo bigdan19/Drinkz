@@ -11,7 +11,6 @@
 		650A86AF299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650A86AE299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift */; };
 		652889A829CB88D8007EFE89 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652889A729CB88D8007EFE89 /* NetworkManager.swift */; };
 		6538E69329C1F0670047CD12 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6538E69229C1F0670047CD12 /* FavoritesViewController.swift */; };
-		6551A0A629AEC6ED009DF5E9 /* SelectedCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */; };
 		6578F46929B25E20005DF427 /* SearchCoctailByNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578F46829B25E20005DF427 /* SearchCoctailByNameTableViewCell.swift */; };
 		6578F46D29B25EC9005DF427 /* SearchCocktailByNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578F46C29B25EC9005DF427 /* SearchCocktailByNameTableViewController.swift */; };
 		6584675529B8B1E400754914 /* IngredientVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6584675429B8B1E400754914 /* IngredientVCTableViewController.swift */; };
@@ -37,7 +36,6 @@
 		650A86AE299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedPopularCoctailVC.swift; sourceTree = "<group>"; };
 		652889A729CB88D8007EFE89 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		6538E69229C1F0670047CD12 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCocktailViewController.swift; sourceTree = "<group>"; };
 		6578F46829B25E20005DF427 /* SearchCoctailByNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoctailByNameTableViewCell.swift; sourceTree = "<group>"; };
 		6578F46C29B25EC9005DF427 /* SearchCocktailByNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCocktailByNameTableViewController.swift; sourceTree = "<group>"; };
 		6584675429B8B1E400754914 /* IngredientVCTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientVCTableViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 			children = (
 				65A837A329AD57F000F6FBFF /* SearchByIngredientsTableViewController.swift */,
 				65A837B129AD629D00F6FBFF /* IngredientsCoctailsListViewController.swift */,
-				6551A0A529AEC6ED009DF5E9 /* SelectedCocktailViewController.swift */,
 				65A837A529AD58E800F6FBFF /* SearchByIngredientsTableViewCell.swift */,
 			);
 			path = SearchCocktailByIngredient;
@@ -339,7 +336,6 @@
 				6594DF9C2996DE76005D0395 /* SceneDelegate.swift in Sources */,
 				6538E69329C1F0670047CD12 /* FavoritesViewController.swift in Sources */,
 				6594DFB22996E633005D0395 /* CoctailsVC.swift in Sources */,
-				6551A0A629AEC6ED009DF5E9 /* SelectedCocktailViewController.swift in Sources */,
 				650A86AF299ADE6E0026DA07 /* SelectedPopularCoctailVC.swift in Sources */,
 				6578F46D29B25EC9005DF427 /* SearchCocktailByNameTableViewController.swift in Sources */,
 				65B26C40299A9FAD00DCDFF6 /* PopularCoctailsCollectionViewCell.swift in Sources */,

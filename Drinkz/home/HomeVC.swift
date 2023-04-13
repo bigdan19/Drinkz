@@ -43,13 +43,6 @@ class HomeVC: UIViewController {
             }
         }
     }
-    
-    // Preparing for segue to show selected popular drink
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
-            destination.drink = popularDrinks[index.row]
-        }
-    }
 }
 
 // extension to HomeVC to conform to DataSource
@@ -68,6 +61,12 @@ extension HomeVC: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "myCocktail") as! SelectedPopularCoctailVC
+        vc.drink = popularDrinks[indexPath.item]
+        self.navigationController?.show(vc, sender: nil)
+    }
 }
 
 // extension to HomeVC to conform to DelegateFlowLayout

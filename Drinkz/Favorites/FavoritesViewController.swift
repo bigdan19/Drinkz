@@ -45,13 +45,10 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Have to create a segue or programmatricaly to load vc with drinks
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
-            destination.drink = favoriteCocktails[index.row]
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "myCocktail") as! SelectedPopularCoctailVC
+        vc.drink = favoriteCocktails[indexPath.item]
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 

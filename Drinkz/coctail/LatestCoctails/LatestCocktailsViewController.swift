@@ -32,17 +32,6 @@ class LatestCocktailsViewController: UIViewController {
     func updateUI() {
         title = "Latest Cocktails"
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showLatestCocktails" {
-            let destinationVC = segue.destination as! SelectedPopularCoctailVC
-            
-            if let index = collectionView.indexPathsForSelectedItems?.first {
-                let selectedDrink = coctails[index.item]
-                destinationVC.drink = selectedDrink
-            }
-        }
-    }
 }
 
 // Extension to LatestCocktailsViewController to conform to UICollectionViewDataSource
@@ -62,6 +51,10 @@ extension LatestCocktailsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "myCocktail") as! SelectedPopularCoctailVC
+        vc.drink = coctails[indexPath.item]
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 

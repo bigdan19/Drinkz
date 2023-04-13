@@ -49,12 +49,6 @@ class IngredientsCoctailsListViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? SelectedPopularCoctailVC, let index = collectionView.indexPathsForSelectedItems?.first {
-            destination.coctailString = stringForCoctail + coctails[index.item].idDrink
-        }
-    }
 }
 
 
@@ -72,6 +66,13 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
         }
         cell.label.text = coctails[indexPath.item].strDrink
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "myCocktail") as! SelectedPopularCoctailVC
+        vc.coctailString = stringForCoctail + coctails[indexPath.item].idDrink
+        self.navigationController?.show(vc, sender: nil)
     }
 }
 
