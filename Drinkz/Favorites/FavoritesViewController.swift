@@ -18,6 +18,8 @@ class FavoritesViewController: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
         title = "Favorite Cocktails"
+//        Have to create new coctail and add to array of favorites
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addCocktail))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +27,16 @@ class FavoritesViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+    
+//    @objc func addCocktail() {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "createCocktail") as! CreateNewCocktailViewController
+//        self.navigationController?.show(vc, sender: nil)
+//    }
 }
+
+
 
 
 // extension to HomeVC to conform to DataSource
@@ -40,7 +51,7 @@ extension FavoritesViewController: UICollectionViewDataSource {
             let url = URL(string: imageUrl)
             cell.image.sd_setImage(with: url)
         }
-        cell.label.text = favoriteCocktails[indexPath.item].name
+        cell.isFavoriteImage.isHidden = false
         return cell
     }
     

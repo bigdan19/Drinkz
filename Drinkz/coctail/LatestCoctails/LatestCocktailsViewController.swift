@@ -46,7 +46,14 @@ extension LatestCocktailsViewController: UICollectionViewDataSource {
             let url = URL(string: imageUrl)
             cell.image.sd_setImage(with: url)
         }
+        cell.isFavoriteImage.isHidden = true
         cell.label.text = coctails[indexPath.item].name
+        
+        for i in favoriteCocktails {
+            if coctails[indexPath.item].name == i.name {
+                cell.isFavoriteImage.isHidden = false
+            }
+        }
         return cell
     }
     

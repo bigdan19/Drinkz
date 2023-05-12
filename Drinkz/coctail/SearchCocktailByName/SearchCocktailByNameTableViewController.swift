@@ -53,15 +53,27 @@ class SearchCocktailByNameTableViewController: UITableViewController {
                 let url = URL(string: imageUrl)
                 cell.cocktailImage.sd_setImage(with: url)
             }
+            cell.isFavoriteImage.isHidden = true
             cell.cocktailLabel.text = searchList[indexPath.row].name
             cell.infoLabel.text = "category: \(searchList[indexPath.row].category.lowercased())\nglass: \(searchList[indexPath.row].glass.lowercased())"
+            for i in favoriteCocktails {
+                if searchList[indexPath.row].name == i.name {
+                    cell.isFavoriteImage.isHidden = false
+                }
+            }
         } else {
             if let imageUrl = list[indexPath.row].imageUrl {
                 let url = URL(string: imageUrl)
                 cell.cocktailImage.sd_setImage(with: url)
             }
+            cell.isFavoriteImage.isHidden = true
             cell.cocktailLabel.text = list[indexPath.row].name
             cell.infoLabel.text = "category: \(list[indexPath.row].category.lowercased())\nglass: \(list[indexPath.row].glass.lowercased())"
+            for i in favoriteCocktails {
+                if list[indexPath.row].name == i.name {
+                    cell.isFavoriteImage.isHidden = false
+                }
+            }
         }
         return cell
     }

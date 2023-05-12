@@ -11,9 +11,10 @@ class PopularCoctailsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var isFavoriteImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        image.layer.cornerRadius = 60
+        image.layer.cornerRadius = 60 
     }
 }

@@ -57,7 +57,14 @@ extension HomeVC: UICollectionViewDataSource {
             let url = URL(string: imageUrl)
             cell.image.sd_setImage(with: url)
         }
+        cell.isFavoriteImage.isHidden = true
         cell.label.text = popularDrinks[indexPath.item].name
+        
+        for i in favoriteCocktails {
+            if popularDrinks[indexPath.item].name == i.name {
+                cell.isFavoriteImage.isHidden = false
+            }
+        }
         return cell
     }
     

@@ -64,7 +64,14 @@ extension IngredientsCoctailsListViewController: UICollectionViewDataSource {
             let url = URL(string: imageUrl)
             cell.image.sd_setImage(with: url)
         }
+        cell.isFavoriteImage.isHidden = true
         cell.label.text = coctails[indexPath.item].strDrink
+        
+        for i in favoriteCocktails {
+            if coctails[indexPath.item].strDrink == i.name {
+                cell.isFavoriteImage.isHidden = false
+            }
+        }
         return cell
     }
     

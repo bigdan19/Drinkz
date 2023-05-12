@@ -15,6 +15,8 @@ class SearchCoctailByNameTableViewCell: UITableViewCell {
     
     @IBOutlet weak var infoLabel: UILabel!
     
+    @IBOutlet weak var isFavoriteImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         cocktailImage.layer.cornerRadius = 25
