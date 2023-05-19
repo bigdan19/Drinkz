@@ -16,7 +16,7 @@
             <objects>
                 <viewController id="H7U-3U-Zsy" customClass="CoctailsVC" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YwG-ca-FKK">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qKA-Pm-xeR">
@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="250.33333333333331" width="410" height="235.33333333333331"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="190" id="1Je-DZ-oby"/>
+                                            <constraint firstAttribute="height" constant="189" id="1Je-DZ-oby"/>
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchMostLatestCocktails" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-vN-2Og">
@@ -116,7 +116,7 @@
             <objects>
                 <tableViewController id="2ki-h6-7Li" customClass="SearchCocktailByNameTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Rfz-ln-u27">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="pXS-Qa-5xo">
@@ -207,7 +207,7 @@ Glass: tall glass</string>
             <objects>
                 <tableViewController id="WFb-zP-bsR" customClass="SearchByIngredientsTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="YiM-lv-HlM">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="fnN-no-tgL">
@@ -276,7 +276,7 @@ Glass: tall glass</string>
             <objects>
                 <viewController id="d0m-Z7-3C8" customClass="IngredientsCoctailsListViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GoC-Qx-Do7">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5x6-uW-mVU">
@@ -836,26 +836,23 @@ Juice of 1/2 Lemon
             </objects>
             <point key="canvasLocation" x="-5679" y="40"/>
         </scene>
-        <!--Custom Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="EqE-8G-eQa">
             <objects>
-                <tabBarController id="G4u-8j-djn" customClass="CustomTabBarController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="U3R-G3-S2Z">
+                <tabBarController id="G4u-8j-djn" customClass="TabBarViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" itemPositioning="centered" id="U3R-G3-S2Z" customClass="TabBarWithCorners" customModule="Drinkz" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="tintColor"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="1" green="0.60863936373918115" blue="0.061034183405099807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <tabBarAppearance key="standardAppearance" backgroundImageContentMode="scaleAspectFit" stackedItemPositioning="centered">
-                            <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </tabBarAppearance>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="systemMaterial"/>
                     </tabBar>
                     <connections>
                         <segue destination="ezi-nw-K0N" kind="relationship" relationship="viewControllers" id="ZkF-R8-JfM"/>
-                        <segue destination="aqA-Mt-eA2" kind="relationship" relationship="viewControllers" id="fUp-y0-PIz"/>
                         <segue destination="zQk-5V-wCU" kind="relationship" relationship="viewControllers" id="cYW-qB-LRa"/>
                         <segue destination="GYX-Xw-uj5" kind="relationship" relationship="viewControllers" id="qJ7-EX-86L"/>
+                        <segue destination="aqA-Mt-eA2" kind="relationship" relationship="viewControllers" id="fUp-y0-PIz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOH-p9-n8p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -953,7 +950,7 @@ Juice of 1/2 Lemon
             <objects>
                 <tableViewController id="u5S-FA-eyg" customClass="IngredientVCTableViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Men-S3-rJJ">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="vKI-1D-Q4F">
@@ -1015,7 +1012,7 @@ Juice of 1/2 Lemon
             <objects>
                 <viewController id="YR7-PR-act" customClass="DetailIngredientViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Xs-x6-I8t">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="1680"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="1597"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SGw-LC-UGc">
@@ -1105,11 +1102,11 @@ Juice of 1/2 Lemon
             </objects>
             <point key="canvasLocation" x="1187" y="206"/>
         </scene>
-        <!--Search cocktails-->
+        <!--Cocktails-->
         <scene sceneID="vlX-FK-TeL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zQk-5V-wCU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search cocktails" id="qCW-oh-vjU">
+                    <tabBarItem key="tabBarItem" title="Cocktails" id="qCW-oh-vjU">
                         <imageReference key="image" image="wineglass.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -1151,11 +1148,13 @@ Juice of 1/2 Lemon
             </objects>
             <point key="canvasLocation" x="-251" y="-34"/>
         </scene>
-        <!--Popular cocktails-->
+        <!--Navigation Controller-->
         <scene sceneID="X02-1q-qL8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ezi-nw-K0N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Popular cocktails" image="house.fill" catalog="system" id="6ki-UO-8wn"/>
+                    <tabBarItem key="tabBarItem" title="" id="6ki-UO-8wn">
+                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Ajh-Ze-JaJ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -1180,7 +1179,7 @@ Juice of 1/2 Lemon
             <objects>
                 <viewController id="UFu-cp-WVB" customClass="LatestCocktailsViewController" customModule="Drinkz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RYS-Za-iJ6" customClass="UICollectionView">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="124-sP-62R">
@@ -1283,6 +1282,11 @@ Juice of 1/2 Lemon
             <point key="canvasLocation" x="-1847" y="-879"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="U3R-G3-S2Z">
+            <size key="intrinsicContentSize" width="-1" height="83"/>
+        </designable>
+    </designables>
     <resources>
         <image name="add" width="64" height="64"/>
         <image name="added" width="64" height="64"/>

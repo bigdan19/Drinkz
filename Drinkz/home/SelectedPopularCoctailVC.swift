@@ -92,14 +92,24 @@ class SelectedPopularCoctailVC: UIViewController {
         coctailInstructionsTextView.text = selectedDrink.instructions
         coctailIngredientsTextView.text = ""
         
-        for i in 0..<max(selectedDrink.measures.count, selectedDrink.ingredients.count) {
-            if i < selectedDrink.measures.count {
-                coctailIngredientsTextView.text.append(selectedDrink.measures[i] + " ")
-            }
+//        for i in 0..<max(selectedDrink.measures.count, selectedDrink.ingredients.count) {
+//            if i < selectedDrink.measures.count {
+//                coctailIngredientsTextView.text.append(selectedDrink.measures[i] + " ")
+//            }
+//            if i < selectedDrink.ingredients.count {
+//                coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + "\n")
+//            }
+//        }
+        
+        for i in 0..<max(selectedDrink.ingredients.count, selectedDrink.measures.count) {
             if i < selectedDrink.ingredients.count {
-                coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + "\n")
+                coctailIngredientsTextView.text.append(selectedDrink.ingredients[i] + " ")
+            }
+            if i < selectedDrink.measures.count {
+                coctailIngredientsTextView.text.append(selectedDrink.measures[i] + "\n")
             }
         }
+        
     }
     // Checking if cocktail is in favorites array
     func checkIfIsInFavorites() {

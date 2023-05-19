@@ -17,7 +17,7 @@ class FavoritesViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
-        title = "Favorite Cocktails"
+        title = "Favorites"
 //        Have to create new coctail and add to array of favorites
 //        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(addCocktail))
     }
